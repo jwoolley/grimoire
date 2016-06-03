@@ -1,0 +1,257 @@
+scalableCreatureAbilities = [
+{
+	"keyword": "dredge",
+	"text": "dredge",
+	"properKeyword": true,	
+	"reminderText": "If you would draw a card, instead you may put exactly {N} card{0} from the top of your library into your graveyard. If you do, return this card from your graveyard to your hand. Otherwise, draw a card.",
+	"costAdjustment": 0.0,
+	"complexity": 1.5,	
+	"isScalable": true,	
+	"colors": [
+		{ 
+			"color": "B", 
+			"affinity": ".05",			
+		},
+		{ 
+			"color": "G", 
+			"affinity": ".05",	
+		}
+	],
+	"variability": {
+	     "baseValue": 3,     
+	     "variabilityCost": 0
+	},
+},
+{
+	"keyword": "bloodthirst",
+	"text": "bloodthirst",
+	"properKeyword": true,	
+	"reminderText": "If an opponent was dealt damage this turn, this creature enters the battlefield with {N} +1/+1 counter{0} on it.",
+	"costAdjustment": 0.0,
+	"isScalable": true,	
+	"colors": [
+		{ 
+			"color": "B", 
+			"affinity": ".05",			
+		},
+		{ 
+			"color": "R", 
+			"affinity": ".05",			
+		},
+		{ 
+			"color": "G", 
+			"affinity": ".05",	
+		}
+	],
+	"variability": {
+	     "baseValue": 1,     
+	     "variabilityCost": 0.5
+	}
+},
+{
+	"keyword": "graft",
+	"text": "graft",
+	"properKeyword": true,	
+	"reminderText": "This creature enters the battlefield with {N} +1/+1 counter{0} on it. Whenever another creature enters the battlefield, you may move a +1/+1 counter from this creature onto it.",
+	"costAdjustment": 0.33,
+	"isScalable": true,	
+	"colors": [
+		{ 
+			"color": "U", 
+			"affinity": ".05",			
+		},
+		{ 
+			"color": "G", 
+			"affinity": ".05" 
+		}
+	],
+	"variability": {
+	     "baseValue": 0,     
+	     "variabilityCost": 0
+	}
+},
+{ 
+	"keyword": "soulshift",
+	"text": "soulshift",
+	"properKeyword": true,		
+	"reminderText": "When this creature dies, you may return target Spirit card with converted mana cost {N} or less from your graveyard to your hand.",
+	"isScalable": true,	
+	"colors": [
+		{ 
+			"color": "G", 
+			"affinity": ".05",
+			"isBuff": false
+		},
+		{ 
+			"color": "B", 
+			"affinity": ".05",
+			"isBuff": false
+		},
+		{ 
+			"color": "W", 
+			"affinity": ".05",
+			"isBuff": false
+		}		
+	],
+	"costAdjustment": 0.33,
+	"variability": {
+	     "baseValue": 0,     
+	     "variabilityCost": 0
+	}
+},
+{
+	"keyword": "bushido",
+	"text": "bushido",
+	"properKeyword": true,
+	"reminderText": "When this blocks or becomes blocked, it gets +{N}/+{N} until end of turn.",		
+	"isScalable": true,
+	"costAdjustment": 0,
+	"colors": [
+		{ 
+			"color": "R", 
+			"affinity": ".05",			
+		},
+		{ 
+			"color": "W", 
+			"affinity": ".05",	
+		},
+		{ 
+			"color": "B", 
+			"affinity": ".05",	
+		}
+	],
+	"variability": {
+	     "baseValue": 1,
+	     "variabilityCost": 0.5
+	  }
+},
+{
+	"keyword": "devour",
+	"text": "devour",
+	"properKeyword": true,
+	"reminderText": "As this enters the battlefield, you may sacrifice any number of creatures. This creature enters the battlefield with {0} +1/+1 counter{1} on it.",
+	"costAdjustment": 0,
+	"isScalable": true,	
+	"colors": [
+		{ 
+			"color": "R", 
+			"affinity": ".05",			
+		},
+		{ 
+			"color": "G", 
+			"affinity": ".05",	
+		},
+		{ 
+			"color": "B", 
+			"affinity": ".05",	
+		}
+	],
+	"variability": {
+	     "baseValue": 1,     
+	     "variabilityCost": 1.5 
+	 }
+},
+{
+	"keyword": "vanishing",
+	"text":	   "vanishing",
+	"properKeyword": true,
+	"reminderText": "This permanent enters the battlefield with {N} time counter{0} on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it.",
+	"costAdjustment": -3.0,
+	"isScalable": true,	
+	"colors": [
+		{ 
+			"color": "W", 
+			"affinity": ".05",			
+		},
+		{ 
+			"color": "U", 
+			"affinity": ".05",	
+		},
+		{ 
+			"color": "B", 
+			"affinity": ".05",			
+		},
+		{ 
+			"color": "R", 
+			"affinity": ".05",	
+		},
+		{ 
+			"color": "G", 
+			"affinity": ".05",	
+		}
+	],
+	"variability": {
+	     "baseValue": 0,     
+	     "variabilityCost": 0.33
+	  }
+},
+{
+	"keyword": "amplify",
+	"text":	   "amplify",
+	"properKeyword": true,
+	"reminderText": "As this creature enters the battlefield, put a +1/+1 counter on it for each {CREATURE_TYPE_LIST} card you reveal in your hand.",
+	"costAdjustment": 0,
+	"isScalable": true,	
+	"colors": [
+		{ 
+			"color": "W", 
+			"affinity": ".05",			
+		},
+		{ 
+			"color": "U", 
+			"affinity": ".05",	
+		},
+		{ 
+			"color": "B", 
+			"affinity": ".05",			
+		},
+		{ 
+			"color": "R", 
+			"affinity": ".05",	
+		},
+		{ 
+			"color": "G", 
+			"affinity": ".05",	
+		}
+	],
+	"variability": {
+	     "baseValue": 1,     
+	     "variabilityCost": 1.0
+	  }
+},
+{ 
+	"keyword": "monstrosity",
+	"text": "Monstrosity",
+	"properKeyword": true,
+	"reminderText": "If this creature isn't monstrous, put {N} +1/+1 counters on it and it becomes monstrous.",
+	"costAdjustment": 0,
+	"isScalable": true,	
+	"colors": [
+		{ 
+			"color": "W", 
+			"affinity": ".025",			
+		},
+		{ 
+			"color": "U", 
+			"affinity": ".033",	
+		},
+		{ 
+			"color": "B", 
+			"affinity": ".025",			
+		},
+		{ 
+			"color": "R", 
+			"affinity": ".05",	
+		},
+		{ 
+			"color": "G", 
+			"affinity": ".05",	
+		}
+	],
+	"variability": {
+	     "baseValue": 1,     
+	     "variabilityCost": 0.33
+	 },
+	"hasAbilityCost": true
+}
+]

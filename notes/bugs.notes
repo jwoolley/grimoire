@@ -1,0 +1,12 @@
+DONE
+// * EffectId #209 (countable -> damage to attacking or blocking creature) should not be a sorcery
+
+* EffectId #169 shouldn't target your creatures
+* EffectId # #153 should exclude defender (flash?), etc. 
+* Disallow duplicate creature types (e.g. spirit spirit for soulshift creatures)
+* flash shouldn't be granted to creatures
+* articles etc. shouldn't be capitalized in word names (unless first word) ('of', 'the')
+* 0-mana cost sorceries shouldn't be
+
+* countables should not be overrepresented (currently, there's one entry per permutaion. use weighting? or expand ability later in the pipeline?)
+

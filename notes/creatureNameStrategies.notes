@@ -1,0 +1,12 @@
+* [Modifier] [Entity]
+** modifier: 
+	*** location (generic or specific)
+	*** faction
+	*** adjective (color-specific, category-specific, etc.)
+	*** character's (generic or specific) (e.g. "Sage's" or "Garruk's")
+** entity:
+  *** creature-type specific
+  *** category-specific (e.g. "animal")
+  *** 
+
+* Compund-word [Noun][Entity]: Flesheater, Windlurker

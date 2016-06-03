@@ -1,0 +1,4 @@
+0000000000000000000000000000000000000000 47d21e9fa0b9b1a15f61d2b10415637c950a41ea jwoolley <jwoolley@netflix.com> 1410913192 -0700	commit (initial): Initial commit - adding source files to git
+47d21e9fa0b9b1a15f61d2b10415637c950a41ea 2c11237b78d8941d7eb4876c484e9fb5ce852bd0 jwoolley <jwoolley@netflix.com> 1410914427 -0700	commit: Creating SublimeText2 project files. Add brackets to alt text for icons.
+2c11237b78d8941d7eb4876c484e9fb5ce852bd0 377f6a093c8fd994660491f0e74ed1253eb87c88 jwoolley <jwoolley@netflix.com> 1411415979 -0700	commit: Making spell effect 190 (countable damage to attacking or blocking creature) instant-only
+377f6a093c8fd994660491f0e74ed1253eb87c88 ff547a5cdad643c959b057e63f8cb4a884f9c110 jwoolley <jwoolley@netflix.com> 1411416492 -0700	commit (merge): merging sublimetext workspace file changes to local

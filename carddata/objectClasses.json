@@ -1,0 +1,69 @@
+objectClasses = {
+	"card": [
+		{
+			"class": "creatureCard",
+			"text": "creature",
+			"parameterToken": "CREATURE_CARD",	
+			"parentClass": "card",
+			"colors": ["G"],
+			"enemyColors": ["B"],
+			"weight": 1
+		},
+		{
+			"class": "landCard",
+			"text": "land",
+			"parameterToken": "LAND_CARD",	
+			"parentClass": "card",
+			"colors": ["G"],
+			"weight": 1
+		},
+		{
+			"class": "{COLOR}Card",
+			"text": "{COLOR}",
+			"parameterToken": "{COLOR}_CARD",	
+			"parentClass": "card",
+			"colors": ["B"],
+			"weight": 0.5
+		},
+		{
+			"class": "artifactCard",
+			"text": "artifact",
+			"parameterToken": "ARTIFACT_CARD",	
+			"parentClass": "card",
+			"colors": ["G"],
+			"weight": 0.25
+		},
+		{
+			"class": "enchantmentCard",
+			"text": "enchantment",
+			"parameterToken": "ENCHANTMENT_CARD",	
+			"parentClass": "card",
+			"colors": ["W", "G"],
+			"weight": 0.25
+		},
+		{
+			"class": "instantCard",
+			"text": "instant",
+			"parameterToken": "INSTANT_CARD",	
+			"parentClass": "card",
+			"colors": ["U"],
+			"weight": 0.25
+		},
+		{
+			"class": "sorceryCard",
+			"text": "sorcery",
+			"parameterToken": "ARTIFACT_CARD",	
+			"parentClass": "card",
+			"colors": ["R"],
+			"weight": 0.25
+		},
+		{
+			"class": "instantOrSorceryCard",
+			"text": "instant or sorcery",
+			"parameterToken": "INSTANT_OR_SORCERY_CARD",	
+			"parentClass": "card",
+			"colors": ["U"],
+			"weight": 0.25
+		},										
+	]
+}

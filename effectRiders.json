@@ -1,0 +1,20 @@
+effectRiders = 
+[
+	{ 
+		"effect": "Gain {N} life.",
+		"colors": ["W", "G"]
+	},
+	{ 
+		"effect": "Scry {N}",
+		"colors": ["W", "U", "B", "R", "G`"]
+	},
+	{
+		"Cremate": "TBD"
+	},
+	{
+		"Peek": "TBD"
+	},
+	{
+		"Mill": "Put "
+	}
+]

@@ -1,0 +1,22 @@
+manifest = [
+	"carddata/spellMatrix.json",
+	"carddata/countableSpellMatrix.json",
+	"carddata/creatureAbilities/evergreenAbilities.json",
+	"carddata/creatureAbilities/expansionAbilities.json",
+	"./carddata/creatureAbilities/scalableCreatureAbilities.json",
+	"./carddata/creatureSize.js",
+	"./carddata/creatureTypes.json",
+	"./carddata/objectClasses.json",
+	"./carddata/countables.json",
+	"./carddata/wordlists/wordList.json",
+	"./carddata/wordlists/creatureNameWordList.json",
+	"./carddata/wordlists/environmentNameWordList.json",
+	"./generatorGlobals.js",
+	"./generatorFunctions.js",
+	"./utilities.js",
+	"./generatorUtilities.js",
+	"./manaCost.js",
+	"./carddata/creatureAbilities/creatureAbilityFunctions.js",
+	"./spellModifiers.js",
+	"./spellGenerator.js"
+];

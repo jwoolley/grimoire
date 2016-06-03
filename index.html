@@ -1,0 +1,771 @@
+<html>
+<head>
+
+<head profile="http://www.w3.org/2005/10/profile">
+<link
+	 rel="icon" 
+      type="image/png" 
+      href="images/favicon.png">
+
+<style>
+	body {
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		background-color: #ECFAFF;
+	}
+
+	table.cardList {
+		margin-left: auto;
+		margin-right: auto;
+		border-style: none;
+		border-spacing: 4;
+	}
+
+	td.cardCell {
+		vertical-align: top;
+	}
+
+	table.card {
+		border: 1px solid black;
+		border-spacing: 0;
+		width: 290;
+		background-color:white;
+	}
+	tr.card-header {
+		border-bottom: 1px solid #aaa;
+	}
+	td.card-topline {
+		width: 70%;
+	}
+	table.card-body {
+		border-spacing: 0;
+		padding: 1;
+		width: 100%;
+		border-style: none;
+	}
+	tr.card-body {
+		border-bottom: 1px dotted #aaa;
+	}	
+
+	.card-name {
+		font-size: small;		
+		font-weight: bold;	
+	}
+	.card-type {
+		font-size: small;		
+		font-weight: bold;	
+	}
+	.mana-cost {
+		font-size: small;		
+		text-align: right;
+	}
+	.card-text {
+		font-size: small;
+	}
+	.card-powertoughness {
+		font-size: small;
+	}	
+	.reminder-text {
+		font-style: italic;
+	}
+	.effectId {
+		font-size: 0.5em;
+		text-align: right;
+		vertical-align: bottom;			
+		color: #EEE;
+	}
+
+	.color-white {
+		background-color: #fffccc;
+	}
+	.color-blue {
+		background-color: #99ccff;
+	}
+	.color-black {
+		background-color: #cccccc;
+	}
+	.color-red {
+		background-color: #ffcccd;
+	}
+	.color-green {
+		background-color: #cbface;
+	}
+	.button-div {
+	    text-align: center;
+	}
+	.button {
+	    font-size: larger;
+	}
+
+	table.share-link-table {
+		margin-left: auto;
+		margin-right: auto;
+		border-style: none;
+		border-spacing: 4;
+	}	
+
+	.share-link-label {
+		font-size: small;		
+		text-align: right;
+	}
+</style>
+
+
+<!-- BEGIN INCLUDES -->
+
+
+<!-- external libraries -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="./jslib/seedrandom.min.js"></script>
+<script type="text/javascript" src="./jslib/jquery.key.js"></script>
+<script type="text/javascript" src="./jslib/dojo.js" data-dojo-config="async: true"></script>
+<script>require(["dojo/_base/lang"], function(lang){});</script>
+
+<!-- page-specific classes -->
+<script type="text/javascript" src="./webpage/icons.js?<?php echo time(); ?>"></script>
+
+<!-- generator classes -->
+<script>
+	function getQueryParam(key) {
+	    key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+	    var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+	    return match && simpleEscape(decodeURIComponent(match[1].replace(/\+/g, " ")));
+	}
+
+	function simpleEscape(string) {
+		return string ? escape(string) : string;
+	}
+</script>
+
+
+<!-- <script type="text/javascript" src="./manifest.json?<?php echo time(); ?>"></script> -->
+<script type="text/javascript" src="./carddata/spellMatrix.json?<?php echo time(); ?>"></script>
+<script type="text/javascript" src="./carddata/countableSpellMatrix.json?<?php echo time(); ?>"></script>
+<script type="text/javascript" src="./carddata/creatureAbilities/evergreenAbilities.json?<?php echo time(); ?>"></script>
+<script type="text/javascript" src="./carddata/creatureAbilities/expansionAbilities.json?<?php echo time(); ?>"></script>
+<script type="text/javascript" src="./carddata/creatureAbilities/scalableCreatureAbilities.json?<?php echo time(); ?>"></script>
+<script type="text/javascript" src="./carddata/creatureSize.js?<?php echo time(); ?>"></script>
+<script type="text/javascript" src="./carddata/creatureTypes.json?<?php echo time(); ?>"></script>
+<script type="text/javascript" src="./carddata/objectClasses.json?<?php echo time(); ?>"></script>
+<script type="text/javascript" src="./carddata/countables.json?<?php echo time(); ?>"></script>
+<script type="text/javascript" src="./carddata/wordlists/wordList.json?<?php echo time(); ?>"></script>
+<script type="text/javascript" src="./carddata/wordlists/creatureNameWordList.json?<?php echo time(); ?>"></script>
+<script type="text/javascript" src="./carddata/wordlists/environmentWordList.json?<?php echo time(); ?>"></script>
+<script type="text/javascript" src="./carddata/wordlists/spellNameTemplates.json?<?php echo time(); ?>"></script>
+<script type="text/javascript" src="./generatorGlobals.js?<?php echo time(); ?>"></script>
+<script type="text/javascript" src="./generatorFunctions.js?<?php echo time(); ?>"></script>
+<script type="text/javascript" src="./utilities.js?<?php echo time(); ?>"></script>
+<script type="text/javascript" src="./generatorUtilities.js?<?php echo time(); ?>"></script>
+<script type="text/javascript" src="./manaCost.js?<?php echo time(); ?>"></script>
+<script type="text/javascript" src="./carddata/creatureAbilities/creatureAbilityFunctions.js?<?php echo time(); ?>"></script>
+<script type="text/javascript" src="./spellModifiers.js?<?php echo time(); ?>"></script>
+<script type="text/javascript" src="./spellGenerator.js?<?php echo time(); ?>"></script>
+
+
+<script>
+var allSpellMatrices = {
+	baseSpells: 	spellMatrixJson,
+	countableSpells: 	countableSpellMatrixJson
+};
+
+var spellMatrices = [];
+var creatureGlobalInitData = { GeneratorGlobals: GeneratorGlobals, colors: Utilities.cloneObject(GeneratorGlobals.colors), spellEffects: allSpellMatrices.baseSpells, creatureAbilities: { expansionAbilities: expansionAbilities, scalableCreatureAbilities: scalableCreatureAbilities },
+	creatureTypes: creatureTypes };
+</script>
+<script type="text/javascript" src="./creatureGlobals.js?<?php echo time(); ?>"></script>
+<script>
+	var creatureExpansionKeywords = [];
+	var expansionKeywordParameter = getQueryParam('expansionKeywords') || getQueryParam('expansionKeyword');	
+	if (expansionKeywordParameter) {	
+		var expansionKeywordStringArray = Utilities.arrayFromSeparatedList(expansionKeywordParameter, ',');
+		expansionKeywordStringArray.forEach(function(keyword) {
+			if (/* TODO: validate against existing keyword list */ true) {
+				creatureExpansionKeywords.push(keyword);
+			}
+		});
+	}
+	if (creatureExpansionKeywords.length > 0) {
+		CreatureGlobals.expansionKeywordFilter = creatureExpansionKeywords;
+	}
+</script>
+<script type="text/javascript" src="./creatureUtilities.js?<?php echo time(); ?>"></script>
+<script type="text/javascript" src="./creatureGenerator.js?<?php echo time(); ?>"></script>
+<script type="text/javascript" src="./wordUtilities.js?<?php echo time(); ?>"></script>
+<script type="text/javascript" src="./nameUtilities.js?<?php echo time(); ?>"></script>
+<script type="text/javascript" src="./mobileChecker.js"></script>
+<!-- END INCLUDES -->
+
+<script>
+var numCardsOverride = 50;
+var numCardsDefault = 12;
+
+var DEFAULT_CREATURE_WEIGHT = 0.75;
+
+var isLocalPage = function() {
+	return document.URL.match(/^file:\/\//) || document.URL.match(/^http:\/\/localhost/);
+}
+var debugLevel = 0;
+var maxDebugLevel = 1000;
+var defaultDebugLevel = 1;
+var debugParam = getQueryParam('debug');
+if (debugParam) {
+	if (isNaN(debugParam)) {
+		debugLevel = debugParam;
+	} else {
+		debugLevel = defaultDebugLevel;
+	}
+}
+
+var debugEnabled;
+if (isLocalPage() || debugParam || debugParam === 0) { 
+	debugEnabled = true;
+}
+
+var getGeneratorSeed = function() {
+	return undefined;
+}
+
+var setGeneratorSeed = function(reset) {
+
+	var genId = (getQueryParam('genId') && !reset) ? getQueryParam('genId') : Utilities.randomInt(100000000, 1);
+	var seed = Math.seedrandom(genId.toString());
+	Utilities.debug('GenId: ' + seed);
+	getGeneratorSeed = function() {	return genId; }
+}
+
+function replaceIcons(string) {
+	var imgTagTemplate = '<img src=\'' + Icons.iconsDir + '{SRC}\' alt=\'{ALT}\'/>';
+	var newString = string;
+	GeneratorUtilities.getParameterTags(string).forEach(function(parameter) {
+		var bareParameter = GeneratorUtilities.stripParameterTags(parameter);
+		if (Icons.iconMap[bareParameter]) {
+			var imgTag = imgTagTemplate.replace('\{SRC\}', Icons.iconMap[bareParameter]).replace('\{ALT\}', '[' + bareParameter + ']');
+			newString = newString.replace(parameter, imgTag, 'g');
+		}
+	});
+	return newString;
+}
+
+var initialized = false;
+var getSpellGenerator = function() {
+	if (!spellGenerator.initialized) {
+		spellGenerator.init({ spellMatrices:  spellMatrices});
+	 	spellGenerator.initialized = true;
+	 }
+	return spellGenerator;
+}
+
+function runGenerator() {
+	setGeneratorSeed(getGeneratorSeed());
+
+	var cardFilters = {};
+
+	var spellMatrixParameter = getQueryParam('spellMatrices') || getQueryParam('spellMatrix');		
+	if (spellMatrixParameter) {
+		var spellMatrixQueryStringArray = Utilities.arrayFromSeparatedList(spellMatrixParameter, ',');
+		spellMatrixQueryStringArray.forEach(function(matrixName) {
+			var matchingKey = Utilities.getKeyIgnoreCase(allSpellMatrices, matrixName);
+			if (matchingKey) {
+				spellMatrices.push(allSpellMatrices[matchingKey]);
+			}
+		});
+	}
+	if (spellMatrices.length == 0) {
+		for(matrix in allSpellMatrices) {
+			spellMatrices.push(allSpellMatrices[matrix]);
+		}
+	}
+
+	var colors = [];
+	var colorsParameter = getQueryParam('colors') || getQueryParam('color');	
+	if (colorsParameter) {
+		for (var i = 0; i < colorsParameter.length; i++) {
+			if (colors.indexOf(colorsParameter.charAt(i) == -1)) {
+				colors.push(colorsParameter.charAt(i));
+			}
+		}
+	} 
+	if (colors.length > 0) {
+		cardFilters.colors = colors;
+	}
+
+	var modifiers = [];
+	var modifiersParameter = getQueryParam('modifiers') || getQueryParam('modifier');
+	if (modifiersParameter) {
+		var modifiersQueryStringArray = Utilities.arrayFromSeparatedList(modifiersParameter, ',');
+		modifiersQueryStringArray.forEach(function(modifier) {
+			var matchingKey = Utilities.getKeyIgnoreCase(spellModifiers, modifier);
+			if ((matchingKey || matchingKey === 0) && modifiers.indexOf(modifier) == -1) {
+				modifiers.push(matchingKey);
+			}
+		});
+	}
+	if (modifiers.length > 0) {
+		cardFilters.modifiers = modifiers;
+	}
+
+	var effectIds = [];
+	var effectIdsParameter = getQueryParam('effectIds') || getQueryParam('effectId');	
+	if (effectIdsParameter) {	
+		var effectIdsQueryStringArray = Utilities.arrayFromSeparatedList(effectIdsParameter, ',');
+		effectIdsQueryStringArray.forEach(function(effectId) {
+			if (!isNaN(effectId) && getSpellGenerator().getEffectById(parseInt(effectId))) {
+				effectIds.push(parseInt(effectId));
+			}
+		});
+	}
+	if (effectIds.length > 0) {
+		cardFilters.effectIds = effectIds;
+	}
+
+	// creature generator parameters
+	var creatureProbabilityParameter = getQueryParam('creatureWeight');
+	cardFilters.creatureProbability = (creatureProbabilityParameter || creatureProbabilityParameter === 0) ? 
+			parseFloat(creatureProbabilityParameter) : DEFAULT_CREATURE_WEIGHT;
+
+	generateCards(cardFilters);	
+}
+
+// TODO: move creature abilities, colors into GeneratorGlobals
+var spellGenerator = SpellGenerator(evergreenAbilities, GeneratorGlobals);
+var cardNames = [];
+GeneratorGlobals.wordMaps = WordUtilities.buildWordMaps(wordList);
+GeneratorGlobals.wordMaps.creatureWordMaps = WordUtilities.buildWordMaps(creatureNameWordList);
+GeneratorGlobals.wordMaps.environmentWordMaps = WordUtilities.buildWordMaps(environmentWordList);
+
+var generateRandomName = function(card, neededWords, nameTemplate) {
+	var wordMatches = {};
+	var matchedCategories = [];
+
+	//Utilities.debug('\nnew card', 2);
+
+	if (card.categories.length < 2) {
+		Utilities.debug('Card has insufficient number of categories. Expected two or more but found: ' + Object.keys(card.categories).join(', '));
+		return 'Unexpectedly Absent';
+	}
+
+	var cardCategories = GeneratorUtilities.getCardCategories(card);
+
+	while (neededWords.length > 0) {
+		//debug('\nnew word');
+		var partOfSpeech = Utilities.randomElement(neededWords);
+
+		if (!wordMatches[partOfSpeech]) {
+			wordMatches[partOfSpeech] = [];
+		}	
+
+		var list = wordList[partOfSpeech];
+
+		var word = null;
+		var cardCategoryCandidates = Utilities.arrayDifference(cardCategories, matchedCategories);
+		var backupCategoryCandidates = matchedCategories.slice();						
+		var retried = false;
+		while(!word && cardCategoryCandidates.length + backupCategoryCandidates.length > 0) {
+			if (cardCategoryCandidates.length > 0) {
+				categoryCandidates = cardCategoryCandidates;
+			} else {
+				Utilities.debug('Exhausted category candidates. Using backup candidates: ' + backupCategoryCandidates.join());
+				categoryCandidates = backupCategoryCandidates;
+			}
+			var category = Utilities.randomElement(categoryCandidates);
+			var cardCategoryValues = card.categories[category].slice();
+
+			while (!word && cardCategoryValues.length > 0) {
+				var categoryValue = Utilities.randomElement(cardCategoryValues);
+
+				if (!GeneratorGlobals.wordMaps[partOfSpeech][category]) {
+					Utilities.debug('WordMap for ' + partOfSpeech + ' has no category entry for ' + category);
+					return ('Underwhelming Forces');
+				}
+				var categoryWords = GeneratorGlobals.wordMaps[partOfSpeech][category][categoryValue];
+				if (categoryWords && categoryWords.length > 0) {
+					word = Utilities.randomElement(categoryWords);	
+					matchedCategories.push(category);
+				}
+				else {
+					Utilities.debug('\'' + categoryValue + '\' not found for category ' + category + '['+ partOfSpeech + ']', 1);
+					Utilities.removeElement(cardCategoryValues, categoryValue);
+				}
+			}
+			if (!word) {
+					//Utilities.debug('Found 0 matches in ' + partOfSpeech + '[\'' + category + '\'] for: ' + card.categories[category].join(', '), 1);
+					Utilities.removeElement(categoryCandidates, category);	
+					// Utilities.debug('Remaining categories: ' + categoryCandidates.join(', '), 1);									
+				if (categoryCandidates.length == 0) {
+					// Utilities.debug('\n\nFound 0 matches in ' + partOfSpeech + ' for ');
+					// cardCategories.forEach(function(category) {
+					// 	Utilities.debug('[\'' + category + '\']: ' + card.categories[category].join(', '));
+					// });
+
+					//Utilities.debug('Unable to find any word matches after retry');	
+					return 'Failed Experiment';				
+				}
+			}
+		}
+		Utilities.removeElement(neededWords, partOfSpeech);
+		wordMatches[partOfSpeech].push(word);
+	}
+
+	var name = nameTemplate.slice();
+	for (partOfSpeech in wordMatches) {
+		wordMatches[partOfSpeech].forEach(function(word) {
+			name = Utilities.replaceParameter(name, partOfSpeech.toUpperCase(), WordUtilities.capitalizeWord(word));
+		});
+	};	
+
+	return name;
+}
+
+function generateNameFromRandomTemplate(card) {
+	var templates = [];
+	spellNameTemplates.forEach(function(template) {
+		if (template.color.indexOf(card.color.code) != -1) {
+			templates.push(template);
+		}
+	});
+	var template = Utilities.randomElement(templates);
+	return generateRandomName(card, template.mutableWords.slice(), template.template);
+}
+
+function generateName(card) {
+
+	//TODO: roll up card effects into qualities (creatureRemoval => detrimental, fog => reactive) and effects into other effects (toughnessReduction => creatureRemoval)
+
+	// TODO: use weights
+	if (card.nameFunction) {
+		return card.nameFunction(card);
+	}
+	else {
+		var name = null;
+		if (Utilities.randomNumber(1) < 0.1) {
+			name = generateRandomName(card, ['verb'], '{VERB}');
+		}
+		if ((!name || name == 'Failed Experiment') && Utilities.randomNumber(1) < 0.08) {
+			name = generateNameFromRandomTemplate(card);
+		}
+		if (!name || name == 'Failed Experiment') {
+			name = generateRandomName(card, ['adjective','noun'], '{ADJECTIVE} {NOUN}');
+		}
+		return name;
+	}
+}
+
+function generateCards(cardFilters) {
+	var generator = getSpellGenerator();
+	var colors = GeneratorGlobals.colors;
+	var colorClasses = [];
+	for (color in colors) {
+		colorClasses[colors[color].code] = 'color-' + colors[color].name;
+	}
+
+	//TODO: consolidate usage of cardFilters vs. CreatureGlobals
+
+	var generateCard = function(cardFilters) {
+		var cardGenerators = {
+			generateSpell: function() {
+				var card = generator.generateSpell(cardFilters);
+				card.name = WordUtilities.capitalizeWords(generateName(card));
+				return card;
+			},
+
+			generateCreature: function() {
+				var card = CreatureGenerator.generateCreature(cardFilters);
+				// PLACEHOLDER! 
+				card.name = WordUtilities.capitalizeWords(NameUtilities.CreatureNameUtilities.generateRandomName(card, creatureNameWordList));
+
+				return card;
+			}
+		};
+		return Utilities.spinProbabilityWheel( [ 
+			{ element: cardGenerators.generateCreature, probability: cardFilters.creatureProbability },
+			{ element: cardGenerators.generateSpell, probability: 1 - cardFilters.creatureProbability }
+		])();
+	}
+
+	var cardSpaces = document.getElementsByClassName('card');
+
+	for (var i = 0; i < cardSpaces.length; i++) {
+		var cardSpace = cardSpaces[i];
+		var card = generateCard(cardFilters);
+
+		var newlineMatcher = new RegExp('\\\n', 'g');	
+			cardSpace.getElementsByClassName('card-text')[0].innerHTML = replaceIcons(card.text.replace(/~/g, card.name).replace(newlineMatcher, '<br/><br/>'));
+			cardSpace.getElementsByClassName('mana-cost')[0].innerHTML = replaceIcons(card.cost);
+			cardSpace.getElementsByClassName('card-type')[0].innerHTML = function(card) {
+				var type = card.type;
+				if (card.subtypes) {
+					type += ' &mdash; ' + GeneratorUtilities.getSubtypeLine(card.subtypes); 
+				}
+				return type;
+			}(card);
+			cardSpace.getElementsByClassName('card-header')[0].className = 'card-header ' + colorClasses[card.color.code];  			
+			cardSpace.getElementsByClassName('card-name')[0].innerHTML = card.name;
+
+			if (card.reminderText) {
+				var reminderText = document.createElement('i'); 
+				reminderText.innerHTML = ' (' + replaceIcons(card.reminderText) + ')';
+				var cardTextElement = cardSpace.getElementsByClassName('card-text')[0];
+				cardTextElement.appendChild(reminderText);
+			}
+
+			var cardPowerToughnessElement = cardSpace.getElementsByClassName('card-powertoughness')[0];
+			if (card.powerToughness || card.loyalty) {
+				if (card.powerToughness) {
+					cardPowerToughnessElement.innerHTML = '<br/>' + card.powerToughness.power + '/' + card.powerToughness.toughness;
+				}
+			} else {
+				cardPowerToughnessElement.innerHTML = '';
+			}
+
+			//add effect ids for debugging
+			if (card.effectId) {
+				var effectIdCell = cardSpace.getElementsByClassName('effectId')[0];
+				if (!effectIdCell) {
+					effectIdCell = document.createElement('td');	
+					effectIdCell.classList.add('effectId')
+					var effectIdRow = document.createElement('tr'); 
+					effectIdRow.appendChild(effectIdCell);				
+					var cardBodyElement = cardSpace.getElementsByClassName('card-body')[0];
+					cardBodyElement.appendChild(effectIdRow);
+				}
+				effectIdCell.innerHTML = card.effectId;
+			} else {
+				var effectIdCell = cardSpace.getElementsByClassName('effectId')[0];
+				if (effectIdCell) {
+					effectIdCell.innerHTML = '';
+				}
+			}
+	}
+}
+
+var createCardSlotTable = function() {
+	var cardTable = document.createElement('table');
+	cardTable.classList.add('card');
+
+	var cardTbody = document.createElement('tbody');
+	cardTable.appendChild(cardTbody);
+		var headerTr = document.createElement('tr');
+		headerTr.classList.add('card-header');
+		cardTbody.appendChild(headerTr);
+	
+			var headerTd = document.createElement('td');
+			headerTr.appendChild(headerTd);
+
+				var table = document.createElement('table');
+				table.width = '100%';
+				headerTd.appendChild(table);
+
+					var tbody = document.createElement('tbody');
+					table.appendChild(tbody);
+
+						var tr = document.createElement('tr');
+						tr.style.valign = 'top';
+						tbody.appendChild(tr);
+
+							var td = document.createElement('td');
+							td.classList.add('card-topline');
+							tr.appendChild(td);
+
+								var h3 = document.createElement('h3');
+								h3.classList.add('card-name');
+								h3.innerHTML = 'CARD NAME';
+								td.appendChild(h3);
+
+							var td = document.createElement('td');
+							td.classList.add('mana-cost');
+							td.innerHTML = 'cost';
+							tr.appendChild(td);
+
+		var bodyTr = document.createElement('tr');
+		bodyTr.classList.add('card-body-row');
+		cardTbody.appendChild(bodyTr);
+
+			var bodyTd = document.createElement('td');
+			bodyTr.appendChild(bodyTd);
+
+				var table = document.createElement('table');
+				table.classList.add('card-body');
+				bodyTd.appendChild(table);
+
+					var tbody = document.createElement('tbody');
+					table.appendChild(tbody);
+
+						var tr = document.createElement('tr');
+						tr.style.valign = 'top';
+						tbody.appendChild(tr);
+
+							var td = document.createElement('td');
+							td.classList.add('card-type');
+							td.innerHTML = 'TYPE';
+							tr.appendChild(td);
+
+						var tr = document.createElement('tr');
+						tr.style.valign ='top';
+						tbody.appendChild(tr);
+
+							var td = document.createElement('td');
+							td.classList.add('vert-spacer');
+							tr.appendChild(td);
+
+								var br = document.createElement('br');
+								td.appendChild(br);			
+
+						var tr = document.createElement('tr');
+						tr.style.valign = 'top';
+						tbody.appendChild(tr);
+
+							var td = document.createElement('td');
+							td.classList.add('card-text');
+							td.innerHTML = 'TEXT';								
+							tr.appendChild(td);
+
+						var tr = document.createElement('tr');
+						tr.style.valign = 'top';
+						tbody.appendChild(tr);
+
+							var td = document.createElement('td');
+							td.align = 'right';
+							td.classList.add('card-powertoughness');
+							td.innerHTML = '';								
+							tr.appendChild(td);							
+
+	return cardTable;
+}
+
+var zoomed = false;
+
+var createCardGrid = function () { 
+	var numCardSlots = this.numCardsOverride || this.numCardsDefault;
+	var defaultCardSlotsPerRow = 3;
+	var cardSlotsPerRow = defaultCardSlotsPerRow;
+
+	if (MobileChecker.isMobileDevice()) {
+		var cardSlotsPerRowMobile = Math.floor(Math.min(4, window.screen.width / 290)); // 290 = table.card.width style
+		cardSlotsPerRow = cardSlotsPerRowMobile;
+
+		if (!zoomed) {
+			document.body.style.zoom = defaultCardSlotsPerRow / cardSlotsPerRowMobile ;
+			zoomed = true;
+		}
+	}
+
+	var cardListTable = document.createElement('table');
+	cardListTable.classList.add('cardList');
+	document.getElementById('content').appendChild(cardListTable);
+	var cardListTbody = document.createElement('tbody');
+	cardListTable.appendChild(cardListTbody);	
+
+	for (var i = 0; i < Math.ceil(numCardSlots / cardSlotsPerRow); i++) {
+		var tr = document.createElement('tr');
+		cardListTbody.appendChild(tr);
+		for (var j = 0; j < cardSlotsPerRow; j++) {
+			var td = document.createElement('td');
+			td.classList.add('cardCell');
+			tr.appendChild(td);
+			td.appendChild(createCardSlotTable());
+		}
+	}
+}
+
+var createGeneratorButton = function() {
+	var div = document.createElement('div');
+	div.classList.add('button-div');
+	var button = document.createElement('button');
+	button.classList.add('button');
+	button.setAttribute('id', 'generatorButton');	
+	button.setAttribute('onclick', 'runGenerator();' + (MobileChecker.isMobileDevice() ? '$(\'html, body\').animate({ scrollTop: 0 }, \'slow\');' : ''));
+	button.innerHTML = 'Generate!';
+	div.appendChild(button);
+ 	document.getElementById('content').appendChild(div);
+}
+
+</script>
+	<title>Prototype Spell Generator</title>
+</head>
+<body>
+<div id="content">
+<script>
+	if (!MobileChecker.isMobileDevice()) {
+		document.body.appendChild(document.createElement('br'));
+	}
+	if (isLocalPage()) {
+		if (getQueryParam('hideUi')) {
+			document.getElementById('content').hidden = true;
+			document.title = 'Untitled';
+		}
+		document.getElementsByTagName('body')[0].style.backgroundColor = '#eef';
+	}
+	</script>
+<h2 align="center">Prototype Spell Generator</h2>
+	<script>
+		if (!MobileChecker.isMobileDevice()) {
+			createGeneratorButton();
+			document.body.appendChild(document.createElement('br'));
+			createCardGrid();	
+		} else {
+			createCardGrid();	
+			document.body.appendChild(document.createElement('br'));					
+			createGeneratorButton();
+		}		
+		runGenerator();
+	</script>
+	<br/>
+<div id="content"></div>
+<table class="share-link-table">
+<tr><td><div id="shareLink"></div></td></tr>
+</table>
+<script>
+
+var getTextWidth = function(text, font) {
+    // re-use canvas object for better performance
+    var canvas = getTextWidth.canvas || (getTextWidth.canvas = document.createElement("canvas"));
+    var context = canvas.getContext("2d");
+    context.font = font;
+    var metrics = context.measureText(text);
+    return metrics.width;
+};
+
+var seedParamHref = '[&\\?]genId=(\\w+)';
+var getShareLink = function() {
+	var seed = getGeneratorSeed();
+	var shareLink = window.location.href;
+	if (shareLink.indexOf('?') == -1) {
+		shareLink += '?genId=' + seed;
+	} else {
+		var seedParam = window.location.href.match(seedParamHref);
+		if (!seedParam || seedParam.length < 2) {
+			shareLink += '&genId=' + seed;
+		} else {
+			shareLink = shareLink.replace(seedParam[0], seedParam[0].replace(seedParam[1], seed));
+		}
+	}
+	//Utilities.debug('SHARE LINK: ' + shareLink);
+	return shareLink;
+}
+var inputFieldId = 'shareLink';
+
+var label = document.createElement('label');
+label.setAttribute('for', inputFieldId);
+label.classList.add('share-link-label');
+label.innerHTML = 'Share: ';
+document.getElementById(inputFieldId).appendChild(label);
+
+var linkField = document.createElement('input');
+linkField.setAttribute('type', 'text');
+linkField.setAttribute('readonly', 'true');
+linkField.setAttribute('value', getShareLink());
+linkField.setAttribute('onClick', 'this.setSelectionRange(0, this.value.length)');
+document.getElementById(inputFieldId).appendChild(linkField);
+var linkFont = window.getComputedStyle(document.getElementById(inputFieldId).getElementsByTagName('input')[0]).getPropertyValue('font');
+linkField.style.width = Math.min(0.7 * window.screen.width, getTextWidth(getShareLink(), linkFont) + 10);
+linkField.style.textAlign = 'center';
+
+document.getElementById('generatorButton').addEventListener('click', function(){
+	var shareLink = getShareLink();
+	if (document.location.href.match(seedParamHref)) {
+		document.location.href = shareLink;
+	}
+	linkField.setAttribute('value', getShareLink());
+}, false);
+</script>
+</body>
+</html>

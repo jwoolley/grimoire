@@ -1,0 +1,860 @@
+creatureTypes = [
+	{ 
+		"type": "human",
+		"categories": ["humanoid", "parasite"],
+		"colors": ["W", "U", "B", "R", "G"],
+		"range": {
+			"power": {
+				"max": "3"
+			},
+		}
+	},
+	{ 
+		"type": "zombie",
+		"categories": ["humanoid", "converter"],
+		"colors": ["B"]
+	},
+	{ 
+		"type": "horror",
+		"categories": ["converter"],
+		"colors": ["B"]
+	},
+	{ 
+		"type": "nightmare",
+		"categories": ["converter"],
+		"colors": ["B"]
+	},		
+	{ 
+		"type": "angel",
+		"keywords": ["flying"],		
+		"requires": { 
+			"keywords": ["flying"]
+		},
+		"colors": ["W"],
+		"range": {
+			"power": {
+				"min": "2"
+			}		
+		}		
+	},
+	{ 
+		"type": "barbarian",
+		"categories": ["class"],
+		"colors": ["R"]
+	},
+	{ 
+		"type": "bird",
+		"colors": ["W", "U", "B"],
+		"keywords": ["flying"],		
+		"requires": { 
+			"keywords": ["flying"]
+		},
+		"range": {
+			"power": {
+				"max": "4"
+			}		
+		}				
+	},
+	{ 
+		"type": "bear",
+		"colors": ["G"],
+		"range": {
+			"power": {
+				"max": "4"
+			}		
+		}	
+	},
+	{ 
+		"type": "crab",
+		"colors": ["U"],
+		"range": {
+			"power": {
+				"max": "4"
+			}		
+		}	
+	},		
+	{ 
+		"type": "crocodile",
+		"colors": ["G"],
+		"range": {
+			"power": {
+				"max": "5"
+			}		
+		}			
+	},	
+	{ 
+		"type": "centaur",
+		"categories": ["mythical", "humanoid"],
+		"colors": ["G"],
+		"range": {
+			"power": {
+				"min": "2"
+			}		
+		}		
+	},
+	{ 
+		"type": "cleric",
+		"categories": ["class"],
+		"colors": ["W", "B"]		
+	},
+	{ 
+		"type": "wizard",
+		"categories": ["class"],
+		"colors": ["U", "R"]		
+	},	
+	{ 
+		"type": "construct",
+		"colors": ["C"]
+	},	
+	{ 
+		"type": "demon",
+		"colors": ["B"],
+		"range": {
+			"power": {
+				"min": "5"
+			}		
+		}			
+	},
+	{ 
+		"type": "cyclops",
+		"categories": ["mythical", "humanoid"],
+		"colors": ["R"],
+		"range": {
+			"power": {
+				"min": "3"
+			}		
+		}			
+	},
+	{ 
+		"type": "dragon",
+		"keywords": ["flying"],		
+		"requires": { 
+			"keywords": ["flying"]
+		},
+		"colors": ["R"],
+		"range": {
+			"power": {
+				"min": "4"
+			}		
+		}		
+	},
+	{ 
+		"type": "drake",
+		"colors": ["U"],
+		"keywords": ["flying"],		
+		"requires": { 
+			"keywords": ["flying"]
+		},
+		"range": {
+			"power": {
+				"max": "3"
+			}		
+		}				
+	},
+	{ 
+		"type": "druid",
+		"categories": ["class"],
+		"colors": ["G"]		
+	},
+	{ 
+		"type": "dryad",
+		"colors": ["G"],
+		"range": {
+			"power": {
+				"max": "2"
+			}		
+		}				
+	},	
+	{ 
+		"type": "dwarf",
+		"categories": ["humanoid"],
+		"colors": ["R"],
+		"range": {
+			"power": {
+				"max": "2"
+			}		
+		}		
+	},	
+	{ 
+		"type": "elemental",
+		"colors": ["W", "U", "B", "R", "G"],
+		"keywords": ["flying"]		
+	},
+	{ 
+		"type": "elephant",
+		"colors": ["G"],
+		"range": {
+			"power": {
+				"min": "3", "max": "3"
+			},
+			"toughness": {
+				"min": "3", "max": "3"
+			}		
+		}				
+	},
+	{ 
+		"type": "elf",
+		"categories": ["humanoid"],
+		"colors": ["G"],
+		"range": {
+			"power": {
+				"max": "2"
+			}		
+		}				
+	},	
+	{ 
+		"type": "elk",
+		"colors": ["W", "G"],
+		"range": {
+			"power": {
+				"min": "3", "max": "4"
+			}		
+		}				
+	},
+	{ 
+		"type": "faerie",
+		"categories": ["humanoid"],
+		"colors": ["U", "B"],
+		"range": {
+			"power": {
+				"max": "3"
+			}		
+		},	
+		"keywords": ["flying"],		
+		"requires": { 
+			"keywords": ["flying"]
+		},			
+	},
+	{ 
+		"type": "fungus",
+		"colors": ["G"],
+		"range": {
+			"power": {
+				"max": "4"
+			}	
+		}				
+	},
+	{ 
+		"type": "giant",
+		"categories": ["humanoid"],
+		"colors": ["W", "R"],
+		"range": {
+			"power": {
+				"min": "3"
+			}	
+		}				
+	},
+	{ 
+		"type": "gnome",
+		"colors": ["C"],
+		"range": {
+			"power": {
+				"max": "2"
+			}	
+		}				
+	},
+	{ 
+		"type": "golem",
+		"colors": ["C"]
+	},
+	{ 
+		"type": "goblin",
+		"categories": ["humanoid"],
+		"colors": ["R"],
+		"range": {
+			"power": {
+				"max": "2"
+			}	
+		}	
+	},
+	{ 
+		"type": "gorgon",
+		"colors": ["B"]	
+	},
+	{ 
+		"type": "griffin",
+		"colors": ["W"],
+		"keywords": ["flying"],		
+		"requires": { 
+			"keywords": ["flying"]
+		},
+		"range": {
+			"power": {
+				"min": 3, "max": "4"
+			}		
+		}				
+	},
+	{ 
+		"type": "harpy",
+		"colors": ["B"],
+		"keywords": ["flying"],		
+		"requires": { 
+			"keywords": ["flying"]
+		},
+		"range": {
+			"power": {
+				"max": "2"
+			}		
+		}				
+	},
+	{ 
+		"type": "hellion",
+		"colors": ["R"],
+		"range": {
+			"power": {
+				"min": "3"
+			}	
+		}	
+	},
+	{ 
+		"type": "homonculus",
+		"colors": ["U"],
+		"range": {
+			"power": {
+				"max": "1"
+			}	
+		}	
+	},
+	{ 
+		"type": "hound",
+		"colors": ["W", "B", "R", "G"],
+		"range": {
+			"power": {
+				"max": "3"
+			}	
+		}	
+	},
+	{ 
+		"type": "illusion",
+		"colors": ["U"]
+	},
+	{ 
+		"type": "imp",
+		"colors": ["B"],
+		"range": {
+			"power": {
+				"max": "2"
+			}		
+		}			
+	},
+	{ 
+		"type": "insect",
+		"colors": ["B", "G"],			
+	},
+	{ 
+		"type": "kavu",
+		"colors": ["R", "G"],
+		"range": {
+			"power": {
+				"max": "2", "max": "4"
+			}	
+		}	
+	},
+	{ 
+		"type": "kithkin",
+		"colors": ["W"],
+		"range": {
+			"power": {
+				"max": "2"
+			}		
+		}			
+	},
+	{ 
+		"type": "knight",
+		"categories": ["class"],		
+		"colors": ["W"],
+		"range": {
+			"power": {
+				"max": "3"
+			}		
+		}			
+	},	
+	{ 
+		"type": "kor",
+		"categories": ["humanoid", "parasite"],
+		"colors": ["W"],
+		"range": { 
+			"power": {
+				"max": "3"
+			}
+		}	
+	},	
+	{ 
+		"type": "kraken",
+				"colors": ["U"],
+		"range": {
+			"power": {
+				"min": "6"
+			}		
+		}	
+	},
+	{ 
+		"type": "leviathan",
+				"colors": ["U"],
+		"range": {
+			"power": {
+				"min": "7"
+			}		
+		}
+	},	
+	{ 
+		"type": "lizard",
+		"categories": ["humanoid"],
+		"colors": ["R"],
+		"range": { 
+			"power": {
+				"max": "4"
+			}
+		}	
+	},	
+	{ 
+		"type": "merfolk",
+		"categories": ["humanoid"],
+		"colors": ["U"],
+		"range": { 
+			"power": {
+				"max": "3"
+			}
+		}	
+	},	
+	{ 
+		"type": "minotaur",
+		"categories": ["humanoid"],
+		"colors": ["R"],
+		"range": { 
+			"power": {
+				"min": "2"
+			}
+		}	
+	},	
+	{ 
+		"type": "monk",
+		"categories": ["class"],
+		"colors": ["W"]
+	},	
+	{ 
+		"type": "naga",
+		"categories": ["humanoid"],
+		"colors": ["U", "B", "G"],
+		"range": { 
+			"power": {
+				"max": "4"
+			}
+		}	
+	},	
+	{ 
+		"type": "nomad",
+		"categories": ["class"],
+		"colors": ["W"]
+	},
+	{ 
+		"type": "octopus",
+		"colors": ["U"],
+		"range": {
+			"power": {
+				"min": "2", "max": "5"
+			}		
+		}	
+	},
+	{ 
+		"type": "ogre",
+		"categories": ["humanoid"],
+		"colors": ["R"],
+		"range": {
+			"power": {
+				"min": "3", "max": "5"
+			}		
+		}	
+	},	
+	{ 
+		"type": "ooze",
+		"colors": ["B", "G", "R"]
+	},
+	{ 
+		"type": "orc",
+		"categories": ["humanoid"],
+		"colors": ["R"],
+		"range": {
+			"power": {
+				"min": "2", "max": "4"
+			}		
+		}	
+	},				
+	{ 
+		"type": "pegasus",
+		"keywords": ["flying"],		
+		"requires": { 
+			"keywords": ["flying"]
+		},
+		"colors": ["W"],
+		"range": {
+			"power": {
+				"max": "2"
+			}		
+		}		
+	},	
+	{ 
+		"type": "plant",
+		"colors": ["G"]
+	},	
+	{ 
+		"type": "rhino",
+		"colors": ["W" ,"G"],
+		"categories": ["humanoid", "animal"],
+		"range": {
+			"power": {
+				"min": "3"
+			}		
+		}	
+	},	
+	{ 
+		"type": "rogue",
+		"categories": ["class"],
+		"colors": ["U", "B"]
+	},
+	{ 
+		"type": "assassin",
+		"categories": ["class"],
+		"colors": ["B"]
+	},
+	{ 
+		"type": "samurai",
+		"categories": ["class"],
+		"colors": ["W", "R"]
+	},
+	{ 
+		"type": "satyr",
+		"categories": ["humanoid"],
+		"colors": ["G", "R"],
+		"range": {
+			"power": {
+				"max": "2"
+			}		
+		}	
+	},
+	{ 
+		"type": "scorpion",
+		"colors": ["G", "B"],
+		"categories": ["animal"],
+		"range": {
+			"power": {
+				"max": "2"
+			}		
+		}	
+	},
+	{ 
+		"type": "scout",
+		"categories": ["class"],
+		"colors": ["W"]
+	},
+	{ 
+		"type": "scarecrow",
+		"colors": ["C"]	
+	},
+	{ 
+		"type": "serpent",
+		"colors": ["U"],
+		"range": {
+			"power": {
+				"min": 4
+			}		
+		}
+	},
+	{ 
+		"type": "shade",
+		"colors": ["B"],
+		"range": {
+			"power": {
+				"max": 3
+			}		
+		}
+	},
+	{ 
+		"type": "shaman",
+		"categories": ["class"],
+		"colors": ["R", "G"]
+	},
+	{ 
+		"type": "skeleton",
+		"categories": ["humanoid"],
+		"colors": ["B"],
+		"range": {
+			"power": {
+				"max": 1
+			}		
+		}
+	},
+	{ 
+		"type": "snake",
+		"colors": ["G"],
+		"range": {
+			"power": {
+				"max": 3
+			}		
+		}
+	},
+	{ 
+		"type": "soldier",
+		"categories": ["class"],
+		"colors": ["W", "U"]
+	},
+	{ 
+		"type": "metathran",
+		"categories": ["humanoid", "parasite"],
+		"colors": ["U"],
+		"range": {
+			"power": {
+				"max": "2"
+			},
+		}
+	},
+	{ 
+		"type": "vedalken",
+		"categories": ["humanoid", "parasite"],
+		"colors": ["U"],
+		"range": {
+			"power": {
+				"max": "3"
+			},
+		}
+	},				
+	{ 
+		"type": "specter",
+		"keywords": ["flying"],		
+		"requires": { 
+			"keywords": ["flying"]
+		},
+		"colors": ["B"],
+		"range": {
+			"power": {
+				"max": "4"
+			}		
+		}		
+	},				
+	{ 
+		"type": "sphinx",
+		"keywords": ["flying"],		
+		"requires": { 
+			"keywords": ["flying"]
+		},
+		"colors": ["U"],
+		"range": {
+			"power": {
+				"min": "4"
+			}		
+		}		
+	},	
+	{ 
+		"type": "spider",
+		"keywords": ["reach"],		
+		"requires": { 
+			"keywords": ["reach"]
+		},
+		"colors": ["G"]
+	},
+	{ 
+		"type": "spirit",
+		"colors": ["W", "U", "B"],
+		"categories": ["modifier"]
+	},	
+	{ 
+		"type": "squid",
+		"colors": ["U"]
+	},
+	{ 
+		"type": "thrull",
+		"colors": ["B"],
+		"range": {
+			"power": {
+				"max": 3
+			}		
+		}
+	},
+	{ 
+		"type": "treefolk",
+		"categories": ["humanoid"],
+		"colors": ["G"]
+	},
+	{ 
+		"type": "troll",
+		"colors": ["G"],
+		"range": {
+			"power": {
+				"min": 2, "max": 5
+			}		
+		}
+	},		
+	{ 
+		"type": "turtle",
+		"colors": ["U"],
+		"range": {
+			"power": {
+				"max": 1
+			}		
+		}
+	},
+	{ 
+		"type": "unicorn",
+		"colors": ["W"],
+		"range": {
+			"power": {
+				"max": 2
+			}		
+		}
+	},
+	{ 
+		"type": "vampire",
+		"categories": ["humanoid"],
+		"colors": ["B"],
+		"range": {
+			"power": {
+				"max": 5
+			}		
+		}
+	},	
+	{ 
+		"type": "viashino",
+		"categories": ["humanoid"],
+		"colors": ["R"],
+		"range": { 
+			"power": {
+				"max": "4"
+			}
+		}	
+	},	
+	{ 
+		"type": "wall",
+		"keywords": ["defender"],		
+		"requires": { 
+			"keywords": ["defender"]
+		},
+		"colors": ["W", "U", "B", "R", "G"]
+	},
+	{ 
+		"type": "warrior",
+		"categories": ["class"],
+		"colors": ["R", "G"]
+	},		
+	{ 
+		"type": "weird",
+		"colors": ["U"],
+		"range": {
+			"power": {
+				"max": 5
+			}		
+		}
+	},
+	{ 
+		"type": "wolf",
+		"colors": ["G"],
+		"range": {
+			"power": {
+				"max": 3
+			}		
+		}
+	},
+	{ 
+		"type": "worm",
+		"colors": ["B"],
+		"range": {
+			"power": {
+				"max": 1
+			}		
+		}
+	},	
+	{ 
+		"type": "yeti",
+		"colors": ["R"],
+		"range": { 
+			"power": {
+				"min": "3", "max": "5", 
+			}
+		}	
+	},
+	{ 
+		"type": "advisor",
+		"categories": ["class"],
+		"colors": ["W", "U", "B", "R", "G"]
+	},
+	{ 
+		"type": "ape",
+		"colors": ["G"],
+		"range": {
+			"power": {
+				"max": 5
+			}		
+		}
+	},
+	{ 
+		"type": "archer",
+		"categories": ["class"],
+		"colors": ["W", "G"]
+	},		
+	{ 
+		"type": "arcon",
+		"keywords": ["flying"],		
+		"requires": { 
+			"keywords": ["flying"]
+		},
+		"colors": ["W"],
+		"range": {
+			"power": {
+				"min": "4"
+			}		
+		}		
+	},	
+	{ 
+		"type": "bat",
+		"keywords": ["flying"],		
+		"requires": { 
+			"keywords": ["flying"]
+		},
+		"colors": ["B"],
+		"range": {
+			"power": {
+				"max": "2"
+			}		
+		}		
+	},
+	{ 
+		"type": "ape",
+		"colors": ["G"],
+		"range": {
+			"power": {
+				"max": 5
+			}		
+		}
+	},		
+	{ 
+		"type": "artificer",
+		"colors": ["U"],
+		"range": {
+			"power": {
+				"max": 5
+			}		
+		}
+	},	
+	{ 
+		"type": "cephalid",
+		"categories": ["humanoid"],
+		"colors": ["U"],
+		"range": { 
+			"power": {
+				"max": "3"
+			}
+		}	
+	},		
+	{ 
+		"type": "djinn",
+		"keywords": ["flying"],		
+		"requires": { 
+			"keywords": ["flying"]
+		},
+		"colors": ["U"],
+		"range": {
+			"power": {
+				"min": "4"
+			}		
+		}		
+	}		
+]

@@ -1,0 +1,619 @@
+countableSpellMatrixJson = [	
+	{
+		"ability": "Prevent the next X damage that would be dealt to target creature this turn, where X is {COUNTABLE}.",
+		"colors": ["W"],
+		"cmc": 2,
+	    "categories" : {
+			"effect": ["damagePrevention"],
+			"quality": ["reactive"]
+	  	},
+		"countable" : {
+			"dependsOn": ["none", "creature"]
+		},
+		"modAffinity": 0.25,		  
+		"sorceryAffinity": 0.05,
+	  	"complexity": 2
+	},
+	{
+	  "ability": "Target player puts the top X cards of his or her library into his or her graveyard, where X is {COUNTABLE}.",
+	  "colors": ["U"],
+	  "cmc": 3,
+	  "categories" : {
+      	"effect": ["milling"]
+	  },
+	  "countable" : {
+		"dependsOn": ["none", "player"]
+	  },
+	  "modAffinity": 0.1,		  
+	  "sorceryAffinity": 0.5,
+	  "complexity": 1.5
+	},
+	{
+	  "ability": "Target player loses X life, where X is {COUNTABLE}.",
+	  "colors": ["B"],
+	  "cmc": 5,
+	  "categories" : {
+      	"effect": ["lifeLoss"]
+	  },
+	  "countable" : {
+		"dependsOn": ["none", "player"]
+	  },
+	  "modAffinity": 0.1,		  
+	  "sorceryAffinity": 1,
+	  "complexity": 1.5
+	},
+	{
+	  "ability": "Target creature gets +X/+X until end of turn, where X is {COUNTABLE}.",
+	  "colors": ["G"],
+	  "cmc": 2,
+	  "categories" : {
+      	"effect": ["creatureBuff"]
+	  },
+	  "countable" : {
+		"dependsOn": ["none", "creature"]
+	  },
+	  "modAffinity": 0.1,		  
+	  "sorceryAffinity": 0.1,
+	  "complexity": 1.5
+	},
+	{
+	  "ability": "Put an X/X {COLOR} {TOKEN_CREATURE_TYPE} creature token onto the battlefield, where X is {COUNTABLE}.",
+	  "colors": ["G"],
+	  "cmc": 4,
+	  "categories" : {
+      	"effect": ["createTokens"]
+	  },
+	  "countable" : {
+		"dependsOn": ["none"]
+	  },
+	  "modAffinity": 0.1,		  
+	  "sorceryAffinity": 0.9,
+	  "complexity": 2
+	},
+	{
+	  "ability": "All creatures get -X/-X until end of turn, where X is {COUNTABLE}.",
+	  "colors": ["B"],
+	  "cmc": 5,
+	  "categories" : {
+      	"effect":  ["massRemoval"],
+      	"quality": ["powerful"]
+	  },
+	  "countable" : {
+		"dependsOn": ["none"]
+	  },
+	  "modAffinity": 0.1,		  
+	  "sorceryAffinity": 0.9,
+	  "complexity": 2
+	},
+	{
+	  "ability": "Look at the top X cards of your library, where X is {COUNTABLE}. Put one of them into your hand and the rest on the bottom of your library in any order.",
+	  "colors": ["U"],
+	  "cmc": 2.5,
+	  "categories" : {
+      	"effect":  ["cardImprovement"]
+	  },
+	  "countable" : {
+		"dependsOn": ["none"]
+	  },
+	  "modAffinity": 0.1,		  
+	  "sorceryAffinity": 0.9,
+	  "complexity": 2
+	},
+	{
+		"ability": "~ deals damage to target player equal to {COUNTABLE}.",
+		"colors": ["R"],
+		"cmc": 4.5,
+		"categories" : {
+	     	"effect":  ["directDamage"]
+	  	},
+		"countable" : {
+			"dependsOn": ["none", "player"]
+		},
+		"modAffinity": 0.25,		  
+		"sorceryAffinity": 0.5,
+	  	"complexity": 1.5
+	},
+	{ 
+	  "ability": "Counter target spell unless its controller pays {X}, where X is {COUNTABLE}.",
+	  "colors": ["U"],
+	  "cmc": 0.75,
+	  "countable" : {
+		"dependsOn": ["none"]
+	  },
+	  "categories" : {
+	  	"effect": ["counterspell", "manaLeak"]
+	  },
+	  "variability": {
+	     "baseValue": 2,
+	     "deviation": 1,
+	     "variabilityCost": 1.0
+	  },
+	  "modAffinity": 0.5,	  
+	  "sorceryAffinity": 0.0,
+	  "complexity": 2
+	},	
+	{
+		"ability": "~ deals damage to target attacking or blocking creature equal to {COUNTABLE}.",
+		"colors": ["W"],
+		"cmc": 2,
+		"categories" : {
+	     	"flavor": ["retribution", "justice", "military"]
+		},
+		"countable" : {
+			"dependsOn": ["none"]
+		},
+		"modAffinity": 0.25,		  
+		"sorceryAffinity": 0.0,
+	  	"complexity": 2
+	},	
+	{
+		"ability": "Target creature deals damage to its controller equal to {COUNTABLE}.",
+		"colors": ["R"],
+		"cmc": 4,
+		"categories" : {
+			"effect": ["threaten", "creatureBased"],
+	     	"flavor": ["provocation", "insanity"]
+		},
+		"countable" : {
+			"dependsOn": ["creature"]
+		},
+		"modAffinity": 0.25,		  
+		"sorceryAffinity": 0.5,
+	  	"complexity": 2
+	},
+	{ 
+	  "ability": "Put X +1/+1 counters on target creature, where X is {COUNTABLE}.",
+	  "colors": ["G"], 
+	  "cmc": 2.5,
+	  "sorceryAffinity": 0.33,
+	  "modAffinity": 0.5,
+		"categories" : {
+		  	"effect": ["creatureBuff"],
+		  	"flavor": ["growth"]
+	  	},
+		"variability": {
+		     "baseValue": 2,
+		     "deviation": 2,
+		     "variabilityCost": 1.33
+		},
+		"countable" : {
+			"dependsOn": ["none"]
+		},
+	  	"complexity": 1.5
+	},
+	{ 
+	  "ability": "Distribute X +1/+1 counters among any number of target creatures, where X is {COUNTABLE}.",
+	  "colors": ["G"], 
+	  "cmc": 5,
+	  "sorceryAffinity": 0.5,
+	  "modAffinity": 0.5,
+		"categories" : {
+		  	"effect": ["creatureBuff"],
+		  	"flavor": ["growth"]
+	  	},
+		"variability": {
+		     "baseValue": 3,
+		     "deviation": 1,
+		     "variabilityCost": 1.5
+		},
+		"countable" : {
+			"dependsOn": ["none"]
+		},
+	  	"complexity": 2
+	},
+	{
+		"ability": "Choose target creature you control. ~ deals damage to target creature or player equal to {COUNTABLE}.",
+		"colors": ["R"],
+		"cmc": 4,
+		"categories" : {
+			"effect": ["directDamage", "creatureBased"]
+		},
+		"countable" : {
+			"dependsOn": ["creature"]
+		},
+		"modAffinity": 0.25,		  
+		"sorceryAffinity": 0.5,
+	  	"complexity": 2
+	},
+	{
+		"ability": "Gain X life, where X is {COUNTABLE}.",
+		"colors": ["W", "G"],
+		"cmc": 2.5,
+	    "categories" : {
+      		"effect": ["lifegain"]
+	  	},
+		"variability": {
+		     "baseValue": 1,
+		     "deviation": 1,
+		     "variabilityCost": 1.5
+		},		
+		"countable" : {
+			"dependsOn": ["none"]
+		},
+		"modAffinity": 0.5,		  
+		"sorceryAffinity": 0.5,
+	  	"complexity": 1.5
+	},	
+	{
+		"ability": "Gain {N} life for each {COUNTABLE}.",
+		"colors": ["W", "G"],
+		"cmc": 0.5,
+	    "categories" : {
+      		"effect": ["lifegain"]
+	  	},
+		"variability": {
+		     "baseValue": 1,
+		     "deviation": 1,
+		     "variabilityCost": 3.0
+		},		
+		"countable" : {
+			"dependsOn": ["none"],
+			"isEnumerable": true,
+		},
+		"modAffinity": 0.5,		  
+		"sorceryAffinity": 0.5,
+	  	"complexity": 1.5
+	},
+	{
+		"ability": "Put a {N}/{N} {COLOR} {TOKEN_CREATURE_TYPE} creature token onto the battlefield for each {COUNTABLE}.",
+		"colors": ["W", "G"],
+		"cmc": 4.25,
+	    "categories" : {
+      		"effect": ["createTokens"]
+	  	},
+		"variability": {
+		     "baseValue": 1,
+		     "deviation": 1,
+		     "variabilityCost": 2.75,
+		     "disallowX": true
+		},		
+		"countable" : {
+			"dependsOn": ["none"],
+			"isEnumerable": true,
+		},
+		"modAffinity": 0.1,		  
+		"sorceryAffinity": 0.9,
+	  	"complexity": 1.5
+	},
+	{
+		"ability": "Put a {N}/{N} {COLOR} {TOKEN_CREATURE_TYPE} creature token with {CREATURE_ABILITY} onto the battlefield for each {COUNTABLE}.",
+		"colors": ["G"],
+		"cmc": 5.0,
+	    "categories" : {
+      		"effect": ["createTokens"]
+	  	},
+		"variability": {
+		     "baseValue": 1,
+		     "deviation": 1,
+		     "variabilityCost": 1.5
+		},		
+		"countable" : {
+			"dependsOn": ["none"],
+			"isEnumerable": true
+		},
+		"modAffinity": 0.1,		  
+		"sorceryAffinity": 0.9,
+	  	"complexity": 2
+	},
+	{
+	  "ability": "Target player discards X cards, where X is {COUNTABLE}.",
+	  "colors": ["B"],
+	  "cmc": 5.25,
+	  "categories" : {
+        "effect": ["discard"]
+	  },
+	  "countable" : {
+		"dependsOn": ["none"]
+	  },
+	  "modAffinity": 0.1,		  
+	  "sorceryAffinity": 1,
+	  "complexity": 1.5
+	},
+	{
+		"ability": "Return up to X {CARD_CLASS} cards from your graveyard to your hand, where X is {COUNTABLE}.",
+		"colors": ["W", "U", "B", "R", "G"],
+		"cmc": 3.5,
+		"categories" : {
+		  	"effect": ["cardImprovement"]
+	  	},
+		"variability": {
+		     "baseValue": 3,
+		     "deviation": 1,
+		     "variabilityCost": 0.5
+		},		
+		"countable" : {
+			"dependsOn": ["none"]
+		},
+		"modAffinity": 0.15,		  
+		"sorceryAffinity": 0.9,
+	  	"complexity": 2
+	},
+	{ 
+	  "ability": "Gain control of target creature with converted mana cost X or less, where X is {COUNTABLE}.",
+	  "colors": ["U"], 
+	  "cmc": 5.5,
+	  "sorceryAffinity": 0.75,
+	  "modAffinity": 0.1,
+		"categories" : {
+		  	"effect": ["dominate"]
+	  	},
+		"variability": {
+		     "baseValue": 3,
+		     "deviation": 2,
+		     "variabilityCost": 2.5
+		},		
+		"countable" : {
+			"dependsOn": ["none"]
+		},
+	  	"complexity": 2
+	},
+	{
+	  "ability": "{OBJECT_PRODUCING_ACTION} Draw cards equal to {COUNTABLE}.",
+	  "colors": ["U"],
+	  "cmc": 4,
+	  "categories" : {
+        "effect": ["cardDraw"]
+	  },
+	  "countable" : {
+		"dependsOn": ["none"]
+	  },
+	  "modAffinity": 0.1,		  
+	  "sorceryAffinity": 1,
+	  "generatorFunction": "actionBasedEffect",
+	  "complexity": 1.5
+	},
+	{
+	  "ability": "{OBJECT_PRODUCING_ACTION} Draw X cards and lose X life, where X is equal to {COUNTABLE}.",
+	  "colors": ["B"],
+	  "cmc": 4.75,
+	  "categories" : {
+	  	"effect":  ["cardDraw", "lifeLoss"],
+	  	"quality": ["powerful"],
+	  	"flavor": ["faustian"]
+	  },
+	  "countable" : {
+		"dependsOn": ["none"]
+	  },
+	  "modAffinity": 0.1,		  
+	  "sorceryAffinity": 1,
+	  "generatorFunction": "actionBasedEffect",
+	  "complexity": 2
+	},	
+	{
+	  "ability": "{OBJECT_PRODUCING_ACTION} Gain life equal to {COUNTABLE}.",
+	  "colors": ["G", "B", "W"],
+	  "cmc": 1.5,
+	  "categories" : {
+	  	"effect": ["lifegain"]
+	  },
+	  "countable" : {
+		"dependsOn": ["none"]
+	  },
+	  "modAffinity": 0.1,		  
+	  "sorceryAffinity": 1,
+	  "generatorFunction": "actionBasedEffect",
+	  "complexity": 1.5
+	},	
+	{
+	  "ability": "{OBJECT_PRODUCING_ACTION} Gain 2 life for each {COUNTABLE}.",
+	  "colors": ["G", "B", "W"],
+	  "cmc": 3,
+	  "categories" : {
+	  	"effect": ["lifegain"]
+	  },
+	  "countable" : {
+		"dependsOn": ["none"],
+		"isEnumerable": true
+	  },
+	  "modAffinity": 0.1,		  
+	  "sorceryAffinity": 1,
+	  "generatorFunction": "actionBasedEffect",
+	  "complexity": 1.5
+	},
+	{
+	  "ability": "{OBJECT_PRODUCING_ACTION} Target player discards a card for each {COUNTABLE}.",
+	  "colors": ["B"],
+	  "cmc": 4,
+	  "categories" : {
+	  	"effect": ["discard"]
+	  },
+	  "countable" : {
+		"dependsOn": ["none"],
+		"isEnumerable": true
+	  },
+	  "modAffinity": 0.1,		  
+	  "sorceryAffinity": 1,
+	  "generatorFunction": "actionBasedEffect",
+	  "complexity": 1.5
+	},
+	{
+	  "ability": "{OBJECT_PRODUCING_ACTION} Target player puts the top X cards of his or her library into his or her graveyard, where X is {COUNTABLE}.",
+	  "colors": ["U"],
+	  "cmc": 1.5,
+	  "categories" : {
+	  	"effect": ["milling"]
+	  },
+	  "countable" : {
+		"dependsOn": ["none"]
+	  },
+	  "modAffinity": 0.1,		  
+	  "sorceryAffinity": 1,
+	  "generatorFunction": "actionBasedEffect",
+	  "complexity": 1.5
+	},
+	{
+	  "ability": "{OBJECT_PRODUCING_ACTION} Gain control of target creature with converted mana cost X or less, where X is {COUNTABLE}.",
+	  "colors": ["U"],
+	  "cmc": 1.5,
+	  "categories" : {
+	  	"effect": ["dominate"]
+	  },
+	  "countable" : {
+		"dependsOn": ["none"]
+	  },
+	  "modAffinity": 0.1,		  
+	  "sorceryAffinity": 1,
+	  "generatorFunction": "actionBasedEffect",
+	  "complexity": 2
+	},
+	{
+		"ability": "{OBJECT_PRODUCING_ACTION} ~ deals damage to target attacking or blocking creature equal to {COUNTABLE}.",
+		"colors": ["W"],
+		"cmc": 2,
+		"categories" : {
+	     	"flavor": ["retribution", "justice", "military"]
+		},
+		"countable" : {
+			"dependsOn": ["none"],
+			"enumerable": ["true"]
+		},
+		"modAffinity": 0.25,		  
+		"sorceryAffinity": 0.0,
+	  	"generatorFunction": "actionBasedEffect",
+	  	"complexity": 1.5
+
+	},				
+]
+
+objectProducingActions = 
+[
+	{
+		"text": "Destroy target creature",
+		"referencePhrase": "that creature",			
+		"produces": "creature",
+		"generatorFunction": "actionBasedEffect",
+		"colors": ["B"],
+		"categories": {
+	  		"effect": ["removal"]
+	  	}, 
+		"cmc": 5.0,
+		"modAffinity": 0.1,		  
+		"sorceryAffinity": 0.5
+	},	
+	{
+		"text": "Reveal any number of {CARD_CLASS} cards from your hand",	
+		"produces": "revealedCardsVariableNumber",
+		"generatorFunction": "actionBasedEffect",				
+		"colors": ["W", "U", "B", "R", "G"],
+		"cmc": 2.0,
+		"modAffinity": 0.1,		  
+		"sorceryAffinity": 0.5	
+	},
+	{
+		"text": "Return target card from your graveyard to your hand",
+		"referencePhrase": "that card",			
+		"produces": "card",
+		"colors": ["G"],
+		 "categories" : {
+		  	"effect": ["regrowth"],
+		  	"flavor": ["growth"]
+		 },
+		"cmc": 2.5,	
+		"modAffinity": 0.1,  
+		"sorceryAffinity": 0.8
+	},	
+	{
+		"text": "Reveal a card at random from your hand",
+		"referencePhrase": "that card",			
+		"produces": "card",
+		"colors": ["R"],
+		"cmc": 0.0,		
+		"modAffinity": 0.1,		  
+		"sorceryAffinity": 0.75
+	},
+	{
+		"text": "Put the top {N} cards from your library into your graveyard",
+		"referencePhrase": "each {CARD_CLASS} put into your graveyard this way",
+		"produces": "milledCards",
+		"colors": ["U"],
+		 "categories" : {
+		  	"effect": ["selfMill"]
+		 },
+		"cmc": 0.0,		
+		"variability": {
+		     "baseValue": 4,
+		     "deviation": 1,
+		     "variabilityCost": 0.5
+		},		
+		"modAffinity": 0.1,		  
+		"sorceryAffinity": 0.5
+	},
+	{
+		"text": "Return target creature to its owner's hand",
+		"referencePhrase": "that creature",			
+		"produces": "creature",
+		"cmc": 3.0,
+		 "categories" : {
+		  	"effect": ["bounce"]
+		 },
+		"colors": ["U"],
+		"modAffinity": 0.1,		  
+		"sorceryAffinity": 0.33
+	},
+	{
+		"text": "Counter target spell",
+		"referencePhrase": "that spell",			
+		"produces": "spell",
+		"cmc": 3.0,
+		 "categories" : {
+		  	"effect": ["counterspell"]
+		 },
+		"colors": ["U"],
+		"modAffinity": 0.1,		  
+		"sorceryAffinity": 0.0
+	},
+	{
+		"text": "Discard any number of cards",
+		"referencePhrase": "those cards",			
+		"produces": "discardedCardsVariableNumber",
+		"generatorFunction": "actionBasedEffect",
+		"colors": ["B"],
+		"cmc": 0.0,
+		"modAffinity": 0.5,		  
+		"sorceryAffinity": 0.35
+	},		
+	{
+		"additionalCost": "sacrifice a creature",
+		"referencePhrase": "that creature",			
+		"produces": "creature",
+		"generatorFunction": "actionBasedEffect",
+		"colors": ["B"],
+		 "categories" : {
+		  	"effect": ["sacrifice"]
+		 },
+		"cmc": 0.0,
+		"modAffinity": 0.5,		  
+		"sorceryAffinity": 0.35
+	},
+	{
+		"additionalCost": "discard a nonland card",
+		"referencePhrase": "that cards",			
+		"produces": "discardedCard",
+		"generatorFunction": "actionBasedEffect",
+		"colors": ["W", "U", "B", "R", "G"],
+		"cmc": 0.0,
+		"modAffinity": 0.25
+	},
+	{
+		"additionalCost": "pay any amount of life",
+		"referencePhrase": "that much life",			
+		"produces": "lifePaid",
+		"generatorFunction": "actionBasedEffect",
+		"colors": ["B"],
+		"cmc": 0.0,
+		"modAffinity": 0.25
+	}
+]
+
+_subjects = [
+	{ 
+		"subjectType": "player",
+		"subject": "that creature's controller",
+		"object": "creature"
+	},
+	{ 
+		"subjectType": "creature",
+		"subject": "that creature's controller",
+		"object": "player"
+	}
+]

@@ -1,0 +1,247 @@
+countables = {
+	"none": [
+		{
+			"text": 	"the number of creatures you control",
+			"enumerable" : {
+				"text": "creature you control"
+			},				
+			"powerFactor":  0.75,
+			"colors": ["W", "U", "B", "R", "G"]
+		},
+		{
+			"text": 	"the number of {COLOR} creatures you control",
+			"enumerable" : {
+				"text": "{COLOR} creature you control"
+			},				
+			"powerFactor":  0.66,
+			"colors": ["W", "U", "B", "R", "G"]
+		},		
+		{
+			"text": 	"the number of plains you control",
+			"enumerable" : {
+				"text": "plains you control"
+			},				
+			"powerFactor":  0.85,
+			"colors": ["W"]
+		},
+		{
+			"text": 	"the number of islands you control",
+			"enumerable" : {
+				"text": "island you control"
+			},				
+			"powerFactor":  0.85,
+			"colors": ["U"]
+		},
+		{
+			"text": 	"the number of swamps you control",
+			"enumerable" : {
+				"text": "swamp you control"
+			},				
+			"powerFactor":  0.85,
+			"colors": ["B"]
+		},
+		{
+			"text": 	"the number of mountain you control",
+			"enumerable" : {
+				"text": "mountain you control"
+			},				
+			"powerFactor":  0.85,
+			"colors": ["R"]
+		},
+		{
+			"text": 	"the number of forests you control",
+			"enumerable" : {
+				"text": "forest you control"
+			},				
+			"powerFactor":  0.85,
+			"colors": ["G"]
+		},								
+		{
+			"text": 	"the number of lands you control",
+			"enumerable" : {
+				"text": "land you control"
+			},				
+			"powerFactor":  1.25,
+			"colors": ["W", "U", "B", "R", "G"]
+		},
+		{
+			"text": 	"the number of cards in your hand",
+			"enumerable" : {
+				"text": "card in your hand"
+			},			
+			"powerFactor":  0.75,
+			"colors": ["W", "U", "B", "R", "G"]
+		},
+		{
+			"text": 	"the number of creature cards in your graveyard",
+			"enumerable" : {
+				"text": "creature card in your graveyard"
+			},			
+			"powerFactor":  0.75,		
+			"colors": ["B", "G"]
+		},
+		{
+			"text": 	"the highest converted mana cost among permanents you control",		
+			"powerFactor":  0.4,
+			"colors": ["W", "U", "B", "R", "G"]
+		},
+		{
+			"text": 	"the number of creatures that died this turn",
+			"enumerable" : {
+				"text": "creature that died this turn"
+			},
+			"powerFactor":  0.6,
+			"colors": ["B"]
+		},
+		{
+			"text": 	"your life total",
+			"powerFactor":  2.0,
+			"colors": ["W"]			
+		},
+		{
+			"text": 	"your devotion to {COLOR}",
+			"powerFactor":  0.66,
+			"colors": ["W", "U", "B", "R", "G"]		
+		},	
+		{
+			"text": 	"the total life lost by your opponents this turn",
+			"powerFactor":  0.4,
+			"colors": ["B"]		
+		},
+		{
+			"text": 	"1 plus the number of cards named ~ in all graveyards",
+			"powerFactor":  0.33,
+			"colors": ["W", "U", "B", "R", "G"]	
+		},
+		{
+			"text": 	"2 plus the number of cards named ~ in all graveyards",
+			"powerFactor":  0.66,
+			"colors": ["W", "U", "B", "R", "G"]	
+		},							
+	],
+	"player" : [
+		{
+			"text": 	"the number of creatures that player controls",
+			"enumerable" : {
+				"text": "creature that player controls"
+			},		
+			"dependsOn": "player",
+			"powerFactor": 0.75,
+			"colors": ["W", "U", "B", "R", "G"]
+		},
+		{
+			"text": 	"the number of cards in that player's hand",
+			"enumerable" : {
+				"text": "card in that player's hand"
+			},
+			"dependsOn": "player",
+			"powerFactor": 0.75,
+			"colors": ["W", "U", "B", "R", "G"]
+		}
+	],
+	"creature": [
+		{
+			"text": 	"that creature's power",
+			"dependsOn":	"creature",
+			"powerFactor":  0.85,
+			"colors": ["W", "U", "B", "R", "G"]
+		},
+		{
+			"text": 	"that creature's toughness",
+			"dependsOn": "creature",		
+			"powerFactor":  0.85,
+			"colors": ["W", "B", "G"]
+		},
+		{
+			"text": 	"that creature's converted mana cost",
+			"dependsOn": "creature",		
+			"powerFactor":  0.85,
+			"colors": ["W", "U", "B", "R", "G"]
+		}		
+	],
+	"card": [
+		{
+			"text": 	"that card's converted mana cost",
+			"dependsOn":	"card",
+			"powerFactor":  1.0,
+			"colors": ["W", "U", "B", "R", "G"]
+		}	
+	],
+	"spell": [
+		{
+			"text": 	"the spell's converted mana cost",
+			"dependsOn":	"spell",
+			"powerFactor":  1.0,
+			"colors": ["U", "R"]
+		}
+	],
+	"revealedCards": [
+		{
+			"text": 	"the number of {CARD_CLASS} cards revealed this way",
+			"enumerable" : {
+				"text": "{CARD_CLASS} card revealed this way"
+			},			
+			"dependsOn":	"revealedCards",
+			"powerFactor":  0.75,
+			"colors": ["W", "U", "B", "R", "G"]
+		}	
+	],
+	"revealedCardsVariableNumber": [
+		{
+			"text": 	"the number of cards revealed this way",
+			"enumerable" : {
+				"text": "card revealed this way"
+			},			
+			"dependsOn":	"revealedCardsVariableNumber",
+			"powerFactor":  0.75,
+			"colors": ["W", "U", "B", "R", "G"]
+		}	
+	],
+	"milledCards": [
+		{
+			"text": 	"the number of {CARD_CLASS} cards put into the graveyard this way",
+			"enumerable" : {
+				"text": "{CARD_CLASS} put into the graveyard this way"
+			},			
+			"dependsOn":	"revealedCards",
+			"powerFactor":  0.75,
+			"colors": ["W", "U", "B", "R", "G"]
+		}	
+	],	
+	"lifePaid": [
+		{
+			"text": 	"the amount of life you paid",
+			"dependsOn":	"lifePaid",
+			"powerFactor":  1.0,
+			"colors": ["B"]
+		}	
+	],	
+	"discardedCard": [
+		{
+			"text": "the discarded card's converted mana cost",
+			"dependsOn":	"discardedCard",
+			"powerFactor":  0.5,
+			"colors": ["W", "U", "B", "R", "G"]
+		}
+	],	
+	"discardedCardsVariableNumber": [
+		{
+			"text": 	"the number of cards discarded this way",
+			"enumerable" : {
+				"text": "card discarded this way"
+			},			
+			"dependsOn":	"discardedCardsVariableNumber",
+			"powerFactor":  0.5,
+			"colors": ["B"]
+		}	
+	]
+}
+
+_ideas = [
+	{
+		"text": "for each {CARD_CLASS} card discarded this way",
+		"dependsOn": "cardExiled",
+		"powerFactor":  0,
+		"ideas": "abstract depends on to card { action } - cardExiled : card : {exiled}"
+	}
+]

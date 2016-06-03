@@ -1,0 +1,76 @@
+basicCreatureAbilities = 
+[
+	{ 
+		"keyword": "cantBlock",
+		"text": "~ can't block.",
+		"colors": [
+			{ 
+				"color": "B", 
+				"affinity": ".05",			
+			},
+			{ 
+				"color": "R", 
+				"affinity": ".1",	
+			}
+		],	
+		"costAdjustment": -0.5,
+		"isDrawback": true		
+	},
+	{ 
+		"keyword": "mustAttack",
+		"text": "~ attacks each turn if able.",
+		"colors": [
+			{ 
+				"color": "R", 
+				"affinity": ".1",	
+			}
+		],
+		"costAdjustment": -0.5,
+		"isDrawback": true
+	},
+	{ 
+		"keyword": "etbTapped",
+		"text": "~ enters the battlefield tapped.",		
+		"colors": [
+			{ 
+				"color": "R", 
+				"affinity": ".1",	
+			}
+		],
+		"costAdjustment": -0.5,
+		"isDrawback": true
+	},		
+	{ 
+		"keyword": "pitskulking",
+		"text": "Creatures with power less than ~'s power can't block it.",		
+		"colors": [
+			{ 
+				"color": "G", 
+				"affinity": ".05",			
+			}
+		],
+		"costAdjustment": 0.5
+	},		
+	{ 
+		"keyword": "unblockable",
+		"text": "~ can't be blocked.",
+		"colors": [
+			{ 
+				"color": "U", 
+				"affinity": ".075",			
+			}
+		],
+		"costAdjustment": 0.75
+	},
+	{ 
+		"keyword": "lure",
+		"text": "All creatures able to block ~ do so.",
+		"colors": [
+			{ 
+				"color": "G", 
+				"affinity": ".05",			
+			}
+		],
+		"costAdjustment": 1.5
+	}	
+]

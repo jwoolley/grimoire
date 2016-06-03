@@ -1,0 +1,189 @@
+environmentWordList = {
+	"location": [
+		{
+			"words":  ["prairie", "steppe"],
+			"category": {
+				"color": ["W"]
+			}
+		},
+		{
+			"words":  ["sea", "wind", "mist", "cloud", "tide", "river"],
+			"category": {
+				"color": ["U"],
+				"usage": ["compound"]
+			}
+		},
+		{
+			"words":  ["horizon"],
+			"category": {
+				"color": ["U"]
+			}
+		},
+		{
+			"words":  ["cemetary"],
+			"category": {
+				"color": ["B"]
+			}
+		},
+		{
+			"words":  ["marsh", "bog", "murk", "grave", "shadow"],
+			"category": {
+				"color": ["B"],
+				"usage": ["compound"]
+			}
+		},
+		{
+			"words":  ["canyon"],
+			"category": {
+				"color": ["R"]
+			}
+		},
+		{
+			"words":  ["cave", "crag", "cliff", "lava"],
+			"category": {
+				"color": ["R"],
+				"usage": ["compound"]
+			}
+		},
+		{
+			"words":  ["jungle", "thicket", "canopy"],
+			"category": {
+				"color": ["G"]
+			}
+		},
+		{
+			"words":  ["grove", "loam", "silt"],
+			"category": {
+				"color": ["G"],
+				"usage": ["compound"]
+			}
+		},
+		{
+			"words":  ["icatian"],
+			"category": {
+				"color": ["W"],
+				"world": ["dominaria"]
+			}
+		},
+		{
+			"words":  ["tolarian"],
+			"category": {
+				"color": ["U"],
+				"world": ["dominaria"]
+			}
+		},
+		{
+			"words":  ["sengir"],
+			"category": {
+				"color": ["B"],
+				"world": ["dominaria"]
+			}
+		},
+		{
+			"words":  ["shivan"],
+			"category": {
+				"color": ["R"],
+				"world": ["dominaria"]
+			}
+		},
+		{
+			"words":  ["llanowar"],
+			"category": {
+				"color": ["G"],
+				"world": ["dominaria"]
+			}
+		},
+		{
+			"words":  ["adarkar"],
+			"category": {
+				"color": ["W","U"],
+				"world": ["iceAge"]
+			}
+		},
+		{
+			"words":  ["kjeldoran"],
+			"category": {
+				"color": ["W"],
+				"world": ["iceAge"]
+			}
+		},
+		{
+			"words":  ["fyndhorn"],
+			"category": {
+				"color": ["G"],
+				"world": ["iceAge"]
+			}
+		},
+		{
+			"words":  ["krovikan"],
+			"category": {
+				"color": ["U","B"],
+				"world": ["iceAge"]
+			}
+		},
+		{
+			"words":  ["karplusan"],
+			"category": {
+				"color": ["R","G"],
+				"world": ["iceAge"]
+			}
+		},
+		{
+			"words":  ["Tresserhorn"],
+			"category": {
+				"color": ["B","R"],
+				"world": ["iceAge"]
+			}
+		},
+		{
+			"words":  ["soldevi"],
+			"category": {
+				"color": ["U","C"],
+				"world": ["iceAge"]
+			}
+		},
+		{
+			"words":  ["balduvian"],
+			"category": {
+				"color": ["U", "B", "R"],
+				"world": ["iceAge"]
+			},
+			"TODO": "abstract locations into location ('shiv') and demonyms ('shivan')"
+		},
+		{
+			"words":  ["daru"],
+			"category": {
+				"color": ["B"],
+				"world": ["otaria"]
+			}
+		},
+		{
+			"words":  ["balshan"],
+			"category": {
+				"color": ["U"],
+				"world": ["otaria"]
+			}
+		},
+		{
+			"words":  ["aphetto"],
+			"category": {
+				"color": ["B"],
+				"world": ["otaria"]
+			}
+		},
+		{
+			"words":  ["pardic"],
+			"category": {
+				"color": ["B"],
+				"world": ["otaria"]
+			}
+		},
+		{
+			"words":  ["wirewood"],
+			"category": {
+				"color": ["B"],
+				"world": ["otaria"]
+			}
+		},
+	]
+};

@@ -1,0 +1,717 @@
+creatureNameWordList = {
+	"entity": [
+		{
+			"words":  ["corpse", "ghoul", "dead", "lich"],
+			"matches": [
+				{
+					"creatureType": ["zombie"]
+				}
+			]
+		},
+		{
+			"words":  ["monstrosity"],
+			"matches": [
+				{
+					"creatureType": ["horror", "nightmare"]
+				}
+			]
+		},
+		{
+			"words":  ["stalker"],
+			"matches": [
+				{
+					"creatureType": ["horror", "nightmare"]
+				}
+			],
+			"category": {"usage": ["compound"]}
+		},
+		{
+			"words":  ["abomination"],
+			"matches": [
+				{
+					"creatureType": ["horror", "nightmare"]
+				}
+			],
+			"category": {"usage": ["dispositional"]}
+		},
+		{
+			"words":  ["seraph", "archangel"],
+			"matches": [
+				{
+					"creatureType": ["angel"]
+				}
+			],
+			"category": {"usage": ["dispositional"]}
+		},
+		{
+			"words":  ["berserker", "raider"],
+			"matches": [
+				{
+					"creatureType": ["barbarian"]
+				}
+			]
+		},
+		{
+			"words":  ["grizzly"],
+			"matches": [
+				{
+					"creatureType": ["bear"]
+				}
+			]
+		},
+		{
+			"words":  ["scuttler"],
+			"matches": [
+				{
+					"creatureType": ["crab"]
+				}
+			]
+		},
+		{
+			"words":  ["gharial", "alligator"],
+			"matches": [
+				{
+					"creatureType": ["crocodile"]
+				}
+			]
+		},
+		{
+			"words":  ["courser"],
+			"matches": [
+				{
+					"creatureType": ["centaur"]
+				}
+			]
+		},
+		{
+			"words":  ["disciple", "priest"],
+			"matches": [
+				{
+					"creatureType": ["cleric"]
+				}
+			],
+			"category": {"usage": ["dispositional"]}
+		},
+		{
+			"words":  ["acolyte",  "believer", "sanctifier", "zealot"],
+			"matches": [
+				{
+					"creatureType": ["cleric"]
+				}
+			]
+		},
+		{
+			"words":  ["tormentor"],
+			"matches": [
+				{
+					"creatureType": ["demon"]
+				}
+			]
+		},
+		{
+			"words":  ["fiend"],
+			"matches": [
+				{
+					"creatureType": ["demon", "vampire"]
+				},
+				{
+					"creatureType": ["elemental", "spirit"],
+					"colors": ["B"]
+				}
+			],
+			"category": {"usage": ["compound"]}
+		},
+		{
+			"words":  ["apprentice", "sorcerer", "illusionist"],
+			"matches": [
+				{
+					"creatureType": ["wizard"]
+				}
+			]
+		},
+		{
+			"words":  ["mage"],
+			"matches": [
+				{
+					"creatureType": ["wizard"]
+				}		
+			],
+			"category": {"usage": ["compound"]}					
+		},		
+		{
+			"words":  ["augur"],
+			"matches": [
+				{
+					"creatureType": ["wizard"]
+				}
+			],
+			"category": {"usage": ["dispositional"]}
+		},		
+		{
+			"words":  ["seer"],
+			"matches": [
+				{
+					"creatureType": ["wizard"]
+				}
+			],
+			"category": {"usage": ["compound", "dispositional"]}
+		},
+		{
+			"words":  ["brute"],
+			"matches": [
+				{
+					"creatureType": ["cyclops", "giant", "ogre", "orc"]
+				}
+			],
+			"category": {"usage": ["compound"] }
+		},
+		{
+			"words":  ["hawk", "falcon", "raptor"],
+			"matches": [
+				{
+					"creatureType": ["bird"]
+				}
+			]
+		},
+		{
+			"words":  ["hawk", "screecher"],
+			"matches": [
+				{
+					"creatureType": ["bird"]
+				}
+			],
+			"category": {"usage": ["compound"]}
+		},
+		{
+			"words":  ["owl", "tern"],
+			"matches": [
+				{
+					"creatureType": ["bird"],
+					"color": ["U"]
+				}
+			]
+		},
+		{
+			"words":  ["kite"],
+			"matches": [
+				{
+					"creatureType": ["bird"],
+					"color": ["U"]
+				}
+			],
+			"category": {"usage": ["compound"]}
+		},
+		{
+			"words":  ["buzzard", "vulture"],
+			"matches": [
+				{
+					"creatureType": ["bird"],
+					"color": ["B"]
+				}
+			]
+		},
+		{
+			"words":  ["roc"],
+			"matches": [
+				{
+					"creatureType": ["bird"],
+					"color": ["W", "R"]
+				}
+			]
+		},
+		{
+			"words":  ["crow", "raven"],
+			"matches": [
+				{
+					"creatureType": ["bird"],
+					"color": ["U", "B"]
+				}
+			]
+		},
+		{
+			"words":  ["raker"],
+			"matches": [
+				{
+					"creatureType": ["drake", "bird"],
+					"color": ["U"]
+				}
+			],
+			"category": {"usage": ["compound"]}
+		},
+		{
+			"words":  ["sage", "oracle"],
+			"matches": [
+				{
+					"creatureType": ["druid", "shaman"]
+				}
+			],
+			"category": {"usage": ["dispositional"]}
+		},
+		{
+			"words":  ["seer"],
+			"matches": [
+				{
+					"creatureType": ["druid", "shaman"]
+				}
+			],
+			"category": {"usage": ["compound", "dispositional"]}
+		},
+		{
+			"words":  ["nymph", "caryatid"],
+			"matches": [
+				{
+					"creatureType": ["dryad"]
+				}
+			]
+		},
+
+		{
+			"words":  ["force", "ravager", "nimbus", ],
+			"matches": [
+				{
+					"creatureType": ["elemental"]
+				}
+			]
+		},
+		{
+			"words":  ["hellhound", "cinder"],
+			"matches": [
+				{
+					"creatureType": ["elemental"],
+					"color":	["R"]
+				}
+			]
+		},
+		{
+			"words":  ["armadon", "mammoth"],
+			"matches": [
+				{
+					"creatureType": ["elephant"]
+				}
+			]
+		},
+		{
+			"words":  ["thallid", "mycoderm", "mycon"],
+			"matches": [
+				{
+					"creatureType": ["fungus"]
+				}
+			]
+		},
+		{
+			"words":  ["colossus", "behemoth", "goliath", "titan"],
+			"matches": [
+				{
+					"creatureType": ["giant"]
+				}
+			]
+		},
+		{
+			"words":  ["pack", "mongrel"],
+			"matches": [
+				{
+					"creatureType": ["hound"]
+				}
+			]
+		},
+		{
+			"words":  ["whelp"],
+			"matches": [
+				{
+					"creatureType": ["hound"]
+				}
+			],
+			"category": {"usage": ["compound"]}
+		},
+		{
+			"words":  ["cur", "jackal", "cerberus"],
+			"matches": [
+				{
+					"creatureType": ["hound"],
+					"color": ["R", "B"]
+				}
+			]
+		},
+		{
+			"words":  ["image", "phantasm",  "entity"],
+			"matches": [
+				{
+					"creatureType": ["illusion"]
+				}
+			]
+		},
+		{
+			"words":  ["skirge"],
+			"matches": [
+				{
+					"creatureType": ["imp"]
+				}
+			],
+			"category": {"usage": ["compound"]}
+		},
+		{
+			"words":  ["beetle", "swarm", "scarab"],
+			"matches": [
+				{
+					"creatureType": ["insect"]
+				}
+			]
+		},
+		{
+			"words":  ["grub"],
+			"matches": [
+				{
+					"creatureType": ["insect"]
+				},
+				{
+					"creatureType": ["elemental", "horror", "spirit"],
+					"colors": ["B"]
+				}
+			],
+			"category": {"usage": ["compound"]}
+		},
+		{
+			"words":  ["caterpillar", "mantis"],
+			"matches": [
+				{
+					"creatureType": ["insect"],
+					"color": ["G"]
+				}
+			]
+		},
+		{
+			"words":  ["cockroach", "maggot"],
+			"matches": [
+				{
+					"creatureType": ["insect"],
+					"color": ["B"]
+				}
+			]
+		},
+		{
+			"words":  ["parasite"],
+			"matches": [
+				{
+					"creatureType": ["insect"],
+					"color": ["B", "R"]
+				}
+			]
+		},
+		{
+			"words":  ["champion"],
+			"matches": [
+				{
+					"creatureType": ["knight"]
+				}
+			],
+			"category": {"usage": ["dispositional"]}
+		},
+		{
+			"words":  ["paladin", "crusader"],
+			"matches": [
+				{
+					"creatureType": ["knight"]
+				}
+			]
+		},
+		{
+			"words":  ["lancer"],
+			"matches": [
+				{
+					"creatureType": ["knight"]
+				}
+			],
+			"category": {"usage": ["compound"]}
+		},
+		{
+			"words":  ["mercenary", "outlaw", "renegade", "veteran", "hero"],
+			"matches": [
+				{
+					"creatureType": ["knight", "soldier", "warrior"]
+				}
+			]
+		},
+		{
+			"words":  ["elder"],
+			"matches": [
+				{
+					"creatureType": ["druid", "cleric", "monk"]
+				}
+			]
+		},
+		{
+			"words":  ["en-dal", "il-dal", "il-vec", "en-vec"],
+			"matches": [
+				{
+					"creatureType": ["kor"]
+				}
+			]
+		},
+		{
+			"words":  ["saurian", "raptor", "iguanar"],
+			"matches": [
+				{
+					"creatureType": ["lizard"]
+				}
+			]
+		},
+		{
+			"words":  ["moloch"],
+			"matches": [
+				{
+					"creatureType": ["lizard"],
+					"color": ["R"]
+				}
+			]
+		},
+		{
+			"words":  ["triton"],
+			"matches": [
+				{
+					"creatureType": ["merfolk"]
+				}
+			]
+		},
+		{
+			"words":  ["student", "missionary", "mentor"],
+			"matches": [
+				{
+					"creatureType": ["monk"]
+				}
+			]
+		},
+		{
+			"words":  ["master"],
+			"matches": [
+				{
+					"creatureType": ["monk", "solider"]
+				}
+			],
+			"category": {"usage": ["compound"]}
+		},
+		{
+			"words":  ["adept"],
+			"matches": [
+				{
+					"creatureType": ["monk", "wizard"]
+				}
+			]
+		},
+		{
+			"words":  ["soothsayer"],
+			"matches": [
+				{
+					"creatureType": ["shaman"]
+				}
+			]
+		},
+		{
+			"words":  ["slime", "goo"],
+			"matches": [
+				{
+					"creatureType": ["ooze"]
+				}
+			]
+		},
+		{
+			"words":  ["vine", "bramble"],
+			"matches": [
+				{
+					"creatureType": ["plant"]
+				}
+			],
+			"category": {"usage": ["compound"]}
+		},
+		{
+			"words":  ["cutthroat", "thief", "spy", "burglar", "trickster"],
+			"matches": [
+				{
+					"creatureType": ["rogue"]
+				}
+			]
+		},
+		{
+			"words":  ["agent"],
+			"matches": [
+				{
+					"creatureType": ["rogue"]
+				}
+			],
+			"category": {"usage": ["dispositional"]}
+		},
+		{
+			"words":  ["guard"],
+			"matches": [
+				{
+					"creatureType": ["soldier", "samurai"]
+				}
+			],
+			"category": {"usage": ["compound"]}
+		},
+		{
+			"words":  ["asp", "cobra", "boa", "mamba", "adder"],
+			"matches": [
+				{
+					"creatureType": ["snake"]
+				}
+			]
+		},
+		{
+			"words":  ["viper"],
+			"matches": [
+				{
+					"creatureType": ["snake"]
+				}
+			],
+			"category": {"usage": ["compound"]}
+		},
+		{
+			"words":  ["militia", "infantry", "recruit", "seargant", "lieutenant", "squad", "cavalry", "phalanx", "reinforcements"],
+			"matches": [
+				{
+					"creatureType": ["soldier"]
+				}
+			]
+		},
+		{
+			"words":  ["recluse"],
+			"matches": [
+				{
+					"creatureType": ["spider"]
+				}
+			]
+		},
+		{
+			"words":  ["widow", "weaver"],
+			"matches": [
+				{
+					"creatureType": ["spider"]
+				}
+			],
+			"category": {"usage": ["compound"]}
+		},
+		{
+			"words":  ["oak", "ash"],
+			"matches": [
+				{
+					"creatureType": ["treefolk"]
+				}
+			]
+		},
+		{
+			"words":  ["ancient"],
+			"matches": [
+				{
+					"creatureType": ["treefolk", "elemental", "leviathan"]
+				}
+			]
+		},
+		{
+			"words":  ["drinker"],
+			"matches": [
+				{
+					"creatureType": ["vampire", "horror"]
+				}
+			],
+			"category": {"usage": ["compound", "dispositional"]}
+		},
+		{
+			"words":  ["barrier"],
+			"matches": [
+				{
+					"creatureType": ["wall"]
+				}
+			]
+		},
+		{
+			"words":  ["rampart", "barricade", "bulwark"],
+			"matches": [
+				{
+					"creatureType": ["wall"],
+					"color": ["W", "R"]
+				}
+			]
+		},
+		{
+			"words":  ["membrane"],
+			"matches": [
+				{
+					"creatureType": ["wall"],
+					"color": ["U", "R"]
+				}
+			]
+		},
+		{
+			"words":  ["alpha", "howler"],
+			"matches": [
+				{
+					"creatureType": ["wolf"]
+				}
+			]
+		},
+		{
+			"words":  ["fluke", "annelid"],
+			"matches": [
+				{
+					"creatureType": ["worm"]
+				}
+			]
+		},
+		{
+			"words":  ["ghost", "ancestor", "eidolon", "apparition", "soul"],
+			"matches": [
+				{
+					"creatureType": ["spirit"]
+				}
+			]
+		},
+		{
+			"words":  ["geist"],
+			"matches": [
+				{
+					"creatureType": ["spirit"]
+				}
+			],
+			"category": {"usage": ["compound"]}
+		},	
+		{
+			"words":  ["banshee"],
+			"matches": [
+				{
+					"creatureType": ["spirit"],
+					"color": ["B"]
+				}
+			]
+		},
+		{
+			"words":  ["kami"],
+			"matches": [
+				{
+					"creatureType": ["spirit"]
+				}
+			],
+			"category": {"usage": ["dispositional"]}
+		},
+		{
+			"words":  ["herald"],
+			"matches": [
+				{
+					"creatureType": ["angel", "demon"]
+				}
+			]
+		},
+		{
+			"words":  ["changeling"],
+			"matches": [
+				{
+					"creatureType": ["shapeshifter"]
+				}
+			]
+		},
+	],
+	"denizen": [
+		{
+			"words":  ["dweller", "strider", "walker", "stalker", "lurker", "runner"],
+		}
+	]
+}

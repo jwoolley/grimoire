@@ -1,0 +1,1218 @@
+spellMatrixJson = [	
+	{ 
+	  "ability": "Destroy all creatures.",
+	  "colors": ["W"], 
+	  "cmc": 4.5,
+	  "sorceryAffinity": 0.975,
+	  "modAffinity": 0.5,
+	  "categories" : {
+	  	"effect": ["massRemoval"],
+	  	"flavor": ["devastation", "wrath"]
+	  },
+	  "copiesDontScale": true,
+	  "complexity": 1.5
+	},
+	{ 
+	  "ability": "Return target card from your graveyard to your hand.",
+	  "colors": ["G"], 
+	  "cmc": 3,
+	  "sorceryAffinity": 0.8,
+	  "categories" : {
+	  	"effect": ["cardImprovement", "regrowth"],
+	  	"flavor": ["growth"]
+	  },
+	  "complexity": 1.5
+	},
+	{ 
+	  "ability": "Return target creature card from your graveyard to your hand.",
+	  "colors": ["B"], 
+	  "cmc": 1,
+	  "sorceryAffinity": 0.75,
+	  "modAffinity": 0.5,
+	  "categories" : {
+		"effect": ["cardImprovement"],
+		"flavor": ["necromancy"]
+	  },
+	  "complexity": 1.5
+	},
+	{ 
+	  "ability": "Target player skips his or her next combat phase.",
+	  "colors": ["W"], 
+	  "cmc": 1,
+	  "sorceryAffinity": 0.5,
+	  "modAffinity": 0.5,
+	  "categories" : {
+		"effect": ["fog"]
+	  },
+	  "complexity": 1.5	 
+	},
+	{ 
+	  "ability": "Destroy target nonblack creature.",
+	  "colors": ["B"], 
+	  "cmc": 3,
+	  "sorceryAffinity": 0.5,
+	  "targetPreference": {
+		"self": false,
+		"opponent": true
+	  },
+	  "categories" : {
+	  	"effect": ["removal"]
+	  }
+	},
+	{ 
+	  "ability": "~ deals {N} damage to target player.",
+	  "colors": ["R"], 
+	  "cmc": 5,
+	  "variability": {
+	     "baseValue": 5,
+	     "deviation": 3,
+	     "variabilityCost": 0.9
+	  },	  
+	  "targetPreference": {
+		"self": false,
+		"opponent": true
+	  },
+	  "categories" : {
+	  	"effect": ["directDamage"]
+	  },
+	  "sorceryAffinity": 0.75
+	},
+	{ 
+	  "ability": "~ deals {N} damage to target creature.",
+	  "colors": ["R"], 
+	  "cmc": 2,
+	  "variability": {
+	     "baseValue": 4,
+	     "deviation": 1,
+	     "variabilityCost": 0.9
+	  },	  
+	  "targetPreference": {
+		"self": false,
+		"opponent": true
+	  },
+	  "categories" : {
+	  	"effect": ["directDamage"]
+	  },
+	  "sorceryAffinity": 0.75
+	},
+	{ 
+	  "ability": "Target player discards {N} cards.",
+	  "colors": ["B"], 
+	  "cmc": 3,
+	  "variability": {
+	     "baseValue": 2,
+	     "deviation": 1,
+	     "variabilityCost": 1.6
+	  },
+	  "targetPreference": {
+		"self": false,
+		"opponent": true
+	  },
+	  "categories" : {
+	  	"quality": ["detrimental"]
+	  },
+	  "sorceryAffinity": 0.95
+	},	
+	{ 
+	  "ability": "Gain {N} life.",
+	  "colors": ["G", "W"], 
+	  "cmc": 1,
+	  "variability": {
+	     "baseValue": 4,
+	     "deviation": 4,
+	     "variabilityCost": 0.33
+	  },
+	  "categories" : {
+	  	"effect": ["lifegain"]
+	  },
+	  "sorceryAffinity": 0.5,
+	  "modAffinity": 0.5
+	},
+	{ 
+	  "ability": "Search your library for a basic land card and put that card onto the battlefield tapped. Then shuffle your library.",
+	  "colors": ["G"], 
+	  "cmc": 2,
+	  "sorceryAffinity": 1,
+	  "categories" : {
+	  	"effect": ["landRamp"]
+	  },
+	  "complexity": 1.5
+	},
+	{ 
+	  "ability": "Destroy target land.",
+	  "colors": ["R"], 
+	  "cmc": 4,
+	  "sorceryAffinity": 1,
+	  "modAffinity": 0.5,
+	  "categories" : {
+	  	"effect": ["destroyPermanent"],
+	  	"flavor": ["disaster"]
+	  }
+	},
+	{ 
+	  "ability": "Tap up to {N} target creatures.",
+	  "colors": ["U"], 
+	  "cmc": 2,
+	  "variability": {
+	     "baseValue": 3,
+	     "deviation": 1,
+	     "variabilityCost": 0.5
+	  },
+	  "targetPreference": {
+		"self": false,
+		"opponent": true
+	  },
+	  "categories" : {
+	  	"effect": ["tapDown"]
+	  },
+	  "sorceryAffinity": 0.5,
+	  "complexity": 1.5
+	},
+	{ 
+	  "ability": "Draw {N} cards.",
+	  "colors": ["U"], 
+	  "cmc": 2.65,
+	  "colorDiscountFactor": 0,
+	  "variability": {
+	     "baseValue": 2,
+	     "deviation": 2,
+	     "variabilityCost": 1.75
+	  },
+	  "categories" : {
+	  	"effect": ["cardDraw"]
+	  },
+	  "sorceryAffinity": 0.5,
+	  "modAffinity": 0.1
+	},
+	{ 
+	  "ability": "~ deals {N} damage to target creature and you gain {N} life.",
+	  "colors": ["B"], 
+	  "cmc": 2,
+	  "variability": {
+	     "baseValue": 2,
+	     "deviation": 2,
+	     "variabilityCost": 1
+	  },
+	  "categories" : {
+	  	"flavor": ["vampirism"]
+	  },
+	  "targetPreference": {
+		"self": false,
+		"opponent": true
+	  },
+	  "sorceryAffinity": 0.5,
+	  "complexity": 1.5
+	},
+	{ 
+	  "ability": "~ deals {N} damage to target opponent. You gain {N} life.",
+	  "colors": ["B"], 
+	  "cmc": 5,
+	  "variability": {
+	     "baseValue": 4,
+	     "deviation": 2,
+	     "variabilityCost": 1
+	  },
+	  "categories" : {
+	  	"flavor": ["vampirism"]
+	  },
+	  "sorceryAffinity": 1,
+	  "complexity": 1.5
+	},
+	{ 
+	  "ability": "Target creature gets +{N}/+{N} until end of turn.",
+	  "colors": ["G"], 
+	  "cmc": 1,
+	  "variability": {
+	     "baseValue": 3,
+	     "deviation": 2,
+	     "variabilityCost": 0.5
+	  },
+	  "targetPreference": {
+		"self": true,
+		"opponent": false
+	  },
+	  "categories" : {
+	  	"effect": ["creatureBuff", "combatTrick"]
+	  },
+	  "sorceryAffinity": 0.25
+	},
+	{ 
+	  "ability": "Target creature gets -{N}/-{N} until end of turn.",
+	  "colors": ["B"], 
+	  "cmc": 2,
+	  "variability": {
+	     "baseValue": 3,
+	     "deviation": 3,
+	     "variabilityCost": 0.5
+	  },
+	  "targetPreference": {
+		"self": false,
+		"opponent": true
+	  },
+	  "categories" : {
+	  	"effect": ["toughnessDecrease"]
+	  },	  
+	  "sorceryAffinity": 0.33
+	},	
+	{ 
+	  "ability": "Put target creature on top of its owner's library.",
+	  "colors": ["U", "W"], 
+	  "cmc": 3,
+	  "targetPreference": {
+		"self": false,
+		"opponent": true
+	  },
+	  "categories" : {
+	  	"effect": ["bounce"]
+	  },		  
+	  "sorceryAffinity": 0.25
+	},
+	{ 
+	  "ability": "~ deals {N} damage to each creature without flying.",
+	  "colors": ["R"], 
+	  "cmc": 2,
+	  "variability": {
+	     "baseValue": 1,
+	     "deviation": 2,
+	     "variabilityCost": 2
+	  },
+	  "targetPreference": {
+		"self": false,
+		"opponent": true
+	  },
+	  "categories" : {
+	  	"effect": ["directDamage"]
+	  },		  
+	  "sorceryAffinity": 0.33,
+	  "complexity": 1.5
+	},
+	{ 
+	  "ability": "~ deals {N} damage to target creature or player.",
+	  "colors": ["R"], 
+	  "cmc": 2,
+	  "variability": {
+	     "baseValue": 3,
+	     "deviation": 1,
+	     "variabilityCost": 1.4
+	  },
+	  "targetPreference": {
+	  	"creature": {
+			"self": false,
+			"opponent": true
+		},
+		"player": {
+			"self": false,
+			"opponent": true
+		},
+	  },
+	  "categories" : {
+	  	"effect": ["directDamage"]
+	  },
+	  "sorceryAffinity": 0.5
+	},
+	{ 
+	  "ability": "~ deals {N} damage to target creature with flying.",
+	  "colors": ["G"], 
+	  "cmc": 1,
+	  "variability": {
+	     "baseValue": 3,
+	     "deviation": 2,
+	     "variabilityCost": 0.5
+	  },
+	  "targetPreference": {
+		"self": false,
+		"opponent": true
+	  },
+	  "categories" : {
+	  	"effect": ["directDamage"]
+	  },	
+	  "sorceryAffinity": 0.4
+	},
+	{ 
+	  "ability": "Gain control of target creature until end of turn. Untap that creature. It gains haste until end of turn.",
+	  "colors": ["R"], 
+	  "cmc": 3,
+	  "targetPreference": {
+		"self": false,
+		"opponent": true
+	  },
+	  "categories" : {
+	  	"effect": ["threaten"]
+	  },	
+	  "sorceryAffinity": 0.75,
+	  "complexity": 1.5
+	},
+	{ 
+	  "ability": "Put two 1/1 {COLOR} {TOKEN_CREATURE_TYPE} creature tokens onto the battlefield.",
+	  "colors": ["W", "R", "G"], 
+	  "cmc": 2,
+	  "categories" : {
+	  	"effect": ["createTokens"]
+	  },		  
+	  "sorceryAffinity": 0.75,
+	  "complexity": 1.5
+	},
+	{ 
+	  "ability": "Put two 1/1 {COLOR} {TOKEN_CREATURE_TYPE} creature tokens with {CREATURE_ABILITY} onto the battlefield.",
+	  "colors": ["W"], 
+	  "cmc": 2,
+	  "categories" : {
+	  	"effect": ["createTokens"]
+	  },
+	  "sorceryAffinity": 0.8,
+	  "modAffinity": 0.1,
+	  "complexity": 2
+	},	
+	{ 
+	  "ability": "Put three 1/1 {COLOR} {TOKEN_CREATURE_TYPE} creature tokens onto the battlefield.",
+	  "colors": ["W", "R", "G"], 
+	  "cmc": 4,
+	  "categories" : {
+	  	"effect": ["createTokens"]
+	  },		  
+	  "sorceryAffinity": 0.75,
+	  "complexity": 1.5
+	},	
+	{ 
+	  "ability": "Put three 1/1 {COLOR} {TOKEN_CREATURE_TYPE} creature tokens with {CREATURE_ABILITY} onto the battlefield.",
+	  "colors": ["W", "R", "G"], 
+	  "cmc": 4.95,
+	  "categories" : {
+	  	"effect": ["createTokens"]
+	  },		  
+	  "sorceryAffinity": 0.9,
+	  "complexity": 2
+	},	
+	{ 
+	  "ability": "Put two 2/2 {COLOR} {TOKEN_CREATURE_TYPE} creature tokens onto the battlefield.",
+	  "colors": ["W", "U", "B", "R", "G"], 
+	  "cmc": 3.5,
+	  "categories" : {
+	  	"effect": ["createTokens"]
+	  },
+	  "sorceryAffinity": 0.9
+	},
+	{ 
+	  "ability": "Put two 2/2 {COLOR} {TOKEN_CREATURE_TYPE} creature tokens with {CREATURE_ABILITY} onto the battlefield.",
+	  "colors": ["W", "U", "B", "R", "G"], 
+	  "cmc": 4.5,
+	  "categories" : {
+	  	"effect": ["createTokens"]
+	  },
+	  "sorceryAffinity": 0.9,
+	  "modAffinity": 0.2,
+	  "complexity": 2
+	},	
+	{ 
+	  "ability": "Search your library for a card and put that card into your hand. Then shuffle your library.",
+	  "colors": ["B"], 
+	  "cmc": 4,
+	  "categories" : {
+	  	"effect": ["tutor"]
+	  },	  
+	  "sorceryAffinity": 1,
+	  "complexity": 2
+	},
+	{ 
+	  "ability": "Target player puts the top {N} cards of his or her library into his or her graveyard.",
+	  "colors": ["U"], 
+	  "cmc": 1.25,
+	  "variability": {
+	     "baseValue": 5,
+	     "deviation": 2,
+	     "variabilityCost": 0.25
+	  },
+	  "targetPreference": {
+		"self": true,
+		"opponent": true
+	  },
+	  "categories" : {
+	  	"effect": ["milling"]
+	  },
+	  "sorceryAffinity": 1,
+	  "complexity": 1.5
+	},
+	{ 
+	  "ability": "Up to {N} target creatures can't block this turn.",
+	  "colors": ["R"], 
+	  "cmc": 3,
+	  "variability": {
+	     "baseValue": 3,
+	     "deviation": 1,
+	     "variabilityCost": 0.5
+	  },
+	  "targetPreference": {
+		"self": false,
+		"opponent": true
+	  },
+	  "categories" : {
+	  	"effect": ["falter"]
+	  },
+	  "sorceryAffinity": 1
+	},
+	{ 
+	  "ability": "Target creature you control fights target creature you don't control.",
+	  "colors": ["G"], 
+	  "cmc": 1,
+	  "categories" : {
+	  	"flavor": ["conflict"]
+	  },
+	  "sorceryAffinity": 0.75,
+	  "targetPreference": {
+		"immutable": true
+	  },
+	  "complexity": 1.5  
+	},
+	{ 
+	  "ability": "Target player draws {N} cards and loses {N} life.",
+	  "colors": ["B"], 
+	  "cmc": 3,
+	  "variability": {
+	     "baseValue": 2,
+	     "deviation": 2,
+	     "variabilityCost": 1.5
+	  },
+	  "categories" : {
+	  	"effect": ["cardDraw", "lifeLoss"],
+	  	"flavor": ["faustian"]
+	  },
+	  "targetPreference": {
+		"self": true,
+		"opponent": true
+	  },	  
+	  "sorceryAffinity": 0.9,
+	  "complexity": 1.5
+	},
+	{ 
+	  "ability": "Return target nonland permanent to its owner's hand.",
+	  "colors": ["U"], 
+	  "cmc": 1.25,
+	  "categories" : {
+	  	"effect": ["bounce"]
+	  },
+	  "targetPreference": {
+		"self": true,
+		"opponent": true
+	  },	  
+	  "sorceryAffinity": 0.25,
+	  "modAffinity": 0.4,  
+	},	
+	{ 
+	  "ability": "Exchange control of two target creatures.",
+	  "colors": ["U"], 
+	  "cmc": 3.75,
+	  "categories" : {
+	  	"effect": ["exchange"],
+	  	"flavor": ["trickery"]
+	  },
+	  "targetPreference": {
+		"self": true,
+		"opponent": false
+	  },	  
+	  "sorceryAffinity": 0.5,
+	  "modAffinity": 0.66,
+	  "complexity": 2  
+	},
+	{ 
+	  "ability": "Put a token onto the battlefield that's a copy of target creature you control.",
+	  "colors": ["U"], 
+	  "cmc": 2.45,
+	  "categories" : {
+	  	"effect": ["clone"]
+	  },
+	  "targetPreference": {
+		"self": true,
+		"opponent": false
+	  },	  
+	  "sorceryAffinity": 0.5,
+	  "modAffinity": 0.66,
+	  "complexity": 2  
+	},		
+	{ 
+	  "ability": "Return target creature to its owner's hand.",
+	  "colors": ["U"], 
+	  "cmc": 1,
+	  "categories" : {
+	  	"effect": ["bounce"]
+	  },
+	  "targetPreference": {
+		"self": true,
+		"opponent": true
+	  },
+	  "sorceryAffinity": 0.5,
+	  "modAffinity": 0.75
+	},
+	{ 
+	  "ability": "All creatures get -{N}/-{N} until end of turn.",
+	  "colors": ["B"], 
+	  "cmc": 2,
+	  "variability": {
+	     "baseValue": 1,
+	     "deviation": 1,
+	     "variabilityCost": 2
+	  },
+	  "categories" : {
+	  	"effect": ["toughnessDecrease", "massRemoval"],
+	  	"scope":  ["multiCreature"]
+	  },
+	  "sorceryAffinity": 0.8,
+	  "modAffinity": 0.1,
+	  "complexity": 1.5 
+	},
+	{ 
+	  "ability": "Target opponent reveals his or her hand. That player discards {N} cards of your choice.",
+	  "colors": ["B"], 
+	  "cmc": 3.4,
+	  "categories" : {
+	  	"effect": ["discard"]
+	  },
+	  "variability": {
+	     "baseValue": 1,
+	     "deviation": 1,
+	     "variabilityCost": 5
+	  },
+	  "sorceryAffinity": 1,
+	  "complexity": 1.5 
+	},
+	{ 
+	  "ability": "You may play up to {N} additional lands this turn.",
+	  "colors": ["G"], 
+	  "cmc": 1,
+	  "categories" : {
+	  	"effect": ["landRamp"]
+	  },
+	  "variability": {
+	     "baseValue": 2,
+	     "deviation": 1,
+	     "variabilityCost": 0.9
+	  },
+	  "sorceryAffinity": 1,
+	  "complexity": 1.5
+	},
+	{ 
+	  "ability": "Destroy target creature with flying.",
+	  "colors": ["G"], 
+	  "cmc": 2,
+	  "categories" : {
+	  	"effect": ["removal"]
+	  },
+	  "targetPreference": {
+		"self": false,
+		"opponent": true
+	  },
+	  "sorceryAffinity": 0.5
+	},
+	{ 
+	  "ability": "Return target creature card from your graveyard to the battlefield.",
+	  "colors": ["W", "B"], 
+	  "cmc": 4,
+	  "categories" : {
+		"flavor": ["necromancy"]
+	  },
+	  "sorceryAffinity": 0.9,
+	  "complexity": 2
+	},
+	{ 
+	  "ability": "Destroy target artifact.",
+	  "colors": ["R", "G"], 
+	  "cmc": 0.5,
+	  "categories" : {
+		"effect": ["destroyPermanent"]
+	  },
+	  "targetPreference": {
+		 "self": false,
+		 "opponent": true
+	  },		  
+	  "sorceryAffinity": 0.25,
+	  "modAffinity": 0.66
+	},
+	{ 
+	  "ability": "Destroy target enchantment.",
+	  "colors": ["W", "G"], 
+	  "cmc": 0.5,
+	  "categories" : {
+		"effect": ["destroyPermanent"]
+	  },
+	  "targetPreference": {
+		"self": false,
+		"opponent": true
+	  },	
+	  "sorceryAffinity": 0.25,
+	  "modAffinity": 0.66
+	},
+	{ 
+	  "ability": "Destroy target artifact or enchantment.",
+	  "colors": ["W", "G"], 
+	  "cmc": 1.5,
+	  "categories" : {
+		"effect": ["destroyPermanent"]
+	  },
+	  "targetPreference": {
+		"self": false,
+		"opponent": true
+	  },	
+	  "sorceryAffinity": 0.3,
+	  "modAffinity": 0.66
+	},
+	{ 
+	  "ability": "Look at the top three cards of your library, then put them back in any order. You may shuffle your library. Draw a card.",
+	  "colors": ["U"], 
+	  "cmc": 1.5,
+	  "categories" : {
+		"effect": ["cardDraw"]
+	  },
+	  "sorceryAffinity": 0.75,
+	  "complexity": 2
+	},
+	{ 
+	  "ability": "Target creature gets +{N}/-{N} until end of turn.",
+	  "colors": ["R", "B"], 
+	  "cmc": 1,
+	  "variability": {
+	     "baseValue": 1,
+	     "deviation": 3,
+	     "variabilityCost": 0.75
+	  },
+	  "categories" : {
+	  	"effect":  ["powerIncrease", "toughnessDecrease"],
+		"flavor": ["mutation"]
+	  },
+	  "targetPreference": {
+		"self": true,
+		"opponent": true
+	  },
+	  "sorceryAffinity": 0.2
+	},
+	{ 
+	  "ability": "Prevent the next {N} damage that would be dealt to target creature or player this turn.",
+	  "colors": ["W"], 
+	  "cmc": 0.5,
+	  "variability": {
+	     "baseValue": 3,
+	     "deviation": 2,
+	     "variabilityCost": 0.33
+	  },
+	  "categories" : {
+		"effect": ["damagePrevention"],
+		"quality": ["reactive"]
+	  },
+	  "targetPreference": {
+		"self": true,
+		"opponent": false
+	  },
+	  "sorceryAffinity": 0.0,
+	  "modAffinity": 0.5,
+	  "complexity": 1.5
+	},
+	{ 
+	  "ability": "Creatures you control get +{N}/+0 and gain {CREATURE_ABILITY} until end of turn.",
+	  "colors": ["B", "R"], 
+	  "cmc": 2,
+	  "categories": {
+	  	"effect": ["combatTrick", "creatureBuff"]
+	  },
+	  "variability": {
+	     "baseValue": 1,
+	     "deviation": 1,
+	     "variabilityCost": 1
+	  },
+	  "sorceryAffinity": 0.4,
+	  "modAffinity": 0.1,
+	  "complexity": 1.5
+	},
+	{ 
+	  "ability": "Creatures you control get +{N}/+{N} and gain {CREATURE_ABILITY} until end of turn.",
+	  "colors": ["W", "G"], 
+	  "cmc": 2,
+	  "categories": {
+	  	"effect": ["massBuff"]
+	  },
+	  "variability": {
+	     "baseValue": 1,
+	     "deviation": 1,
+	     "variabilityCost": 2
+	  },
+	  "sorceryAffinity": 0.4,
+	  "modAffinity": 0.1,
+	  "complexity": 1.5
+	},
+	{ 
+	  "ability": "Target creature gets +{N}/+0 and gains {CREATURE_ABILITY} until end of turn.",
+	  "colors": ["B", "R"], 
+	  "cmc": 1,
+	  "categories": {
+	  	"effect": ["combatTrick", "creatureBuff", "powerIncrease"]
+	  },
+	  "variability": {
+	     "baseValue": 1,
+	     "deviation": 3,
+	     "variabilityCost": 0.5
+	  },
+	  "targetPreference": {
+		"self": true,
+		"opponent": false
+	  },
+	  "sorceryAffinity": 0.4
+	},
+	{ 
+	  "ability": "Target creature gets +{N}/+{N} and gains {CREATURE_ABILITY} until end of turn.",
+	  "colors": ["W", "U", "G"], 
+	  "cmc": 0.5,
+	  "categories": {
+	  	"effect": ["creatureBuff"]
+	  },
+	  "variability": {
+	     "baseValue": 1,
+	     "deviation": 1,
+	     "variabilityCost": 1.5
+	  },
+	  "targetPreference": {
+		"self": true,
+		"opponent": false
+	  },
+	  "sorceryAffinity": 0.4
+	},
+	{ 
+	  "ability": "Target creature gets +0/+{N} and gains {CREATURE_ABILITY} until end of turn.",
+	  "colors": ["W", "U"], 
+	  "cmc": 0.0,
+	  "categories": {
+	  	"effect": ["combatTrick", "creatureBuff", "toughnessIncrease"]
+	  },
+	  "variability": {
+	     "baseValue": 1,
+	     "deviation": 4,
+	     "variabilityCost": 0.2
+	  },
+	  "targetPreference": {
+		"self": true,
+		"opponent": false
+	  },
+	  "sorceryAffinity": 0.0
+	},	
+	{ 
+	  "ability": "Creatures you control gain {CREATURE_ABILITY} until end of turn.",
+	  "colors": ["W", "U", "B", "R", "G"], 
+	  "cmc": 1,
+	  "categories": {
+	  	"effect": ["massBuff"]
+	  },
+	  "sorceryAffinity": 0.1,
+	  "copiesDontScale": true
+	},
+	{ 
+	  "ability": "Target creature gains {CREATURE_ABILITY} until end of turn.",
+	  "colors": ["W", "U", "B", "R", "G"], 
+	  "cmc": 0.0,
+	  "categories": {
+	  	"effect": ["combatTrick", "creatureBuff", "toughnessIncrease"]
+	  },
+	  "targetPreference": {
+		"self": true,
+		"opponent": false
+	  },
+	  "sorceryAffinity": 0.1,
+	  "modAffinity": 0.75
+	},
+	{ 
+	  "ability": "Target opponent loses {N} life.",
+	  "colors": ["B"], 
+	  "cmc": 1.25,
+	  "categories" : {
+	  	"effect": ["lifeLoss"]
+	  },
+	  "variability": {
+	     "baseValue": 3,
+	     "deviation": 2,
+	     "variabilityCost": 2.25
+	  },
+	  "sorceryAffinity": 1,
+	  "modAffinity": 0.75
+	},
+	{ 
+	  "ability": "Target player sacrifices a creature.",
+	  "colors": ["B"],
+	  "cmc": 2,
+	  "targetPreference": {
+		"self": false,
+		"opponent": true
+	  },
+	  "categories" : {
+	  	"effect": ["removal", "sacrifice"],
+	  	"quality": ["detrimental"]
+	  },
+	  "sorceryAffinity": 1,
+	  "modAffinity": 0.75
+	},
+	{ 
+	  "ability": "Target creature blocks this turn if able.",
+	  "colors": ["G"],
+	  "cmc": 2,
+	  "targetPreference": {
+		"self": false,
+		"opponent": true
+	  },
+	  "categories" : {
+	  	"effect": ["provoke"],
+	  	"flavor": ["ambush"]
+	  },
+	  "sorceryAffinity": 1,
+	  "modAffinity": 0.75
+	},
+	{ 
+	  "ability": "Draw {N} cards, then discard {N} cards.",
+	  "colors": ["U", "R"],
+	  "cmc": 0.75,
+	  "variability": {
+	     "baseValue": 2,
+	     "deviation": 1,
+	     "variabilityCost": 0.75
+	  },
+	  "categories" : {
+	  	"effect": ["looting"]
+	  },	  
+	  "sorceryAffinity": 0.75,
+	  "modAffinity": 0.75,
+	  "complexity": 1.5
+	},
+	{ 
+	  "ability": "Regenerate target creature.",
+	  "colors": ["B", "G"],
+	  "cmc": 0.25,
+	  "categories" : {
+	  	"effect": ["damagePrevention"]
+	  },
+	  "targetPreference": {
+		"self": true,
+		"opponent": false
+	  }, 	  
+	  "sorceryAffinity": 0.05,
+	  "modAffinity": 0.9
+	},
+	{ 
+	  "ability": "Target creature you control gains protection from the color of your choice until end of turn.",
+	  "colors": ["W"],
+	  "cmc": 0.25,
+	  "categories" : {
+	  	"effect": ["protection", "damagePrevention"]
+	  },
+	  "targetPreference": {
+		"self": true,
+		"opponent": false
+	  },	  
+	  "sorceryAffinity": 0.05,
+	  "modAffinity": 0.9
+	},
+	{ 
+	  "ability": "Prevent all combat damage that would be dealt this turn.",
+	  "colors": ["W", "G"],
+	  "cmc": 0.9,
+	  "categories" : {
+	  	"effect": ["fog"]
+	  },
+	  "sorceryAffinity": 0.00,
+	  "modAffinity": 0.9,
+	  "copiesDontScale": true,
+	  "complexity": 1.5
+	},
+	{ 
+	  "ability": "Exile target creature, then return it to the battlefield under its owner's control.",
+	  "colors": ["W", "U"],
+	  "categories" : {
+	  	"effect": ["flicker"],
+	  	"flavor": ["voyage", "dematerialization"]
+	  },
+	  "cmc": 0.9,
+	  "sorceryAffinity": 0.00,
+	  "modAffinity": 0.85,
+	  "targetPreference": {
+		"self": true,
+		"opponent": true
+	  },
+	  "complexity": 1.5
+	},
+	{ 
+	  "ability": "Counter target creature spell.",
+	  "colors": ["U"],
+	  "cmc": 1.00,
+	  "categories" : {
+	  	"effect": ["counterspell"]
+	  },
+	  "sorceryAffinity": 0.00,
+	  "modAffinity": 0.66,
+	  "copiesDontScale": true,
+	  "complexity": 1.5
+	},
+	{ 
+	  "ability": "Counter target noncreature spell.",
+	  "colors": ["U"],
+	  "cmc": 1.00,
+	  "categories" : {
+	  	"effect": ["counterspell"]
+	  },
+	  "sorceryAffinity": 0.00,
+	  "modAffinity": 0.66,
+	  "copiesDontScale": true,
+	  "complexity": 1.5
+	},	
+	{ 
+	  "ability": "Target creature gets -{N}/-0 until end of turn.",
+	  "colors": ["U"],
+	  "cmc": 0.66,
+	  "categories" : {
+	  	"effect": ["powerDecrease", "creatureDebuff"]
+	  },
+	  "variability": {
+	     "baseValue": 4,
+	     "deviation": 2,
+	     "variabilityCost": 0.33
+	  },
+	  "targetPreference": {
+		"self": true,
+		"opponent": false
+	  },	  
+	  "modAffinity": 0.8,	  
+	  "sorceryAffinity": 0
+	},
+	{ 
+	  "ability": "Target player shuffles up to {N} target cards from his or her graveyard into his or her library.",
+	  "colors": ["G"],
+	  "cmc": 0.66,
+	  "categories" : {
+	  	"flavor": ["cultivation"]
+	  },
+	  "variability": {
+	     "baseValue": 3,
+	     "deviation": 1,
+	     "variabilityCost": 0.33
+	  },
+	  "modAffinity": 0.8,	  
+	  "sorceryAffinity": 0.66,
+	  "complexity": 1.5
+	},
+	{ 
+	  "ability": "Counter target spell unless its controller pays {{N}}.",
+	  "colors": ["U"],
+	  "cmc": 0.75,
+	  "categories" : {
+	  	"effect": ["counterspell", "manaLeak"]
+	  },
+	  "variability": {
+	     "baseValue": 2,
+	     "deviation": 1,
+	     "variabilityCost": 0.75
+	  },
+	  "modAffinity": 0.75,	  
+	  "sorceryAffinity": 0.0,
+	  "complexity": 1.5
+	},
+	{ 
+	  "ability": "Target creature attacks this turn if able.",
+	  "colors": ["R"],
+	  "cmc": 0.66,
+	  "categories" : {
+	  	"effect": ["taunt"],
+	  	"flavor": ["provocation"],
+	  	"quality": ["proactive"]
+	  },
+	  "targetPreference": {
+		"self": false,
+		"opponent": true
+	  },	 	  
+	  "modAffinity": 0.9,	  
+	  "sorceryAffinity": 0 
+	},
+	{ 
+	  "ability": "Target creature can't attack this turn.",
+	  "colors": ["W"],
+	  "cmc": 0.5,
+	  "categories" : {
+	  	"effect": ["cantAttack"]
+	  },
+	  "targetPreference": {
+		"self": false,
+		"opponent": true
+	  },	 	  
+	  "modAffinity": 0.85,	  
+	  "sorceryAffinity": 0 
+	},
+	{		 
+	  "ability": "~ deals {N} damage to target attacking or blocking creature.",
+	  "colors": ["W"],
+	  "cmc": 1.0,
+	  "variability": {
+	     "baseValue": 3,
+	     "deviation": 1,
+	     "variabilityCost": 0.75
+	  },
+	  "categories" : {
+	  	"effect": ["directDamage"],
+	  	"flavor": ["justice", "retribution", "military"]
+	  },
+	  "targetPreference": {
+		"self": false,
+		"opponent": true
+	  },
+	  "modAffinity": 0.8,	  
+	  "sorceryAffinity": 0
+	},
+	{		 
+	  "ability": "Destroy target attacking or blocking creature.",
+	  "colors": ["W"],
+	  "cmc": 2.5,
+	  "categories" : {
+	  	"flavor": ["justice", "retribution"]
+	  },  
+	  "targetPreference": {
+		"self": false,
+		"opponent": true
+	  },
+	  "modAffinity": 0.66,		  
+	  "sorceryAffinity": 0
+	},
+	{		 
+	  "ability": "Target land becomes a {N}/{N} creature until end of turn. It's still a land.",
+	  "colors": ["G"],
+	  "cmc": 2,
+	  "categories" : {
+	  	"flavor": ["forestMagic", "cultivation"]
+	  }, 	  
+	  "variability": {
+	     "baseValue": 3,
+	     "deviation": 1,
+	     "variabilityCost": 0.25
+	  },
+	  "targetPreference": {
+		"self": false,
+		"opponent": true
+	  },	  
+	  "modAffinity": 0.66,		  
+	  "sorceryAffinity": 0.5,
+	  "complexity": 2
+	},
+	{		 
+	  "ability": "You may tap or untap target nonland permanent.",
+	  "colors": ["U"],
+	  "cmc": 0.25,
+	  "targetPreference": {
+		"self": true,
+		"opponent": true
+	  },
+	  "categories" : {
+	  	"effect": ["twiddle"],
+	  	"flavor": ["trickery"]
+	  },  
+	  "modAffinity": 0.9,		  
+	  "sorceryAffinity": 0.1
+	},
+	{		 
+	  "ability": "Exile up to {N} target cards from target player's graveyard.",
+	  "colors": ["B"],
+	  "cmc": 0.5,
+	  "variability": {
+	     "baseValue": 3,
+	     "deviation": 1,
+	     "variabilityCost": 0.25
+	  },	  
+	  "modAffinity": 1.00,		  
+	  "sorceryAffinity": 0.1
+	},
+	{
+		"ability": "Reveal the top {N} cards of your library. Put all {CARD_CLASS} cards revealed this way into your hand and the rest into your graveyard.",
+		"colors": ["G"],
+		"cmc": 2.6,
+		"categories" : {
+			"effect": ["mulch", "cardDraw"],
+		},  
+		"variability": {
+		     "baseValue": 4,
+		     "deviation": 1,
+		     "variabilityCost": 0.6
+		},		
+		"countable" : {
+			"dependsOn": ["none"]
+		},
+		"modAffinity": 0.15,		  
+		"sorceryAffinity": 0.9,
+	  	"complexity": 2
+	},
+	{
+		"ability": "Return a {CARD_CLASS} card from your graveyard to your hand.",
+		"colors": ["W", "U", "B", "R", "G"],
+		"cmc": 2.4,
+		"categories" : {
+		  	"effect": ["cardImprovement"]
+	  	},
+		"countable" : {
+			"dependsOn": ["none"]
+		},
+		"modAffinity": 0.15,		  
+		"sorceryAffinity": 0.9,
+	  	"complexity": 1.5
+	},	
+	{
+		"ability": "Return up to {N} {CARD_CLASS} cards from your graveyard to your hand.",
+		"colors": ["W", "U", "B", "R", "G"],
+		"cmc": 3.5,
+		"categories" : {
+		  	"effect": ["cardImprovement"]
+	  	},
+		"variability": {
+		     "baseValue": 3,
+		     "deviation": 1,
+		     "variabilityCost": 0.5
+		},
+		"modAffinity": 0.15,		  
+		"sorceryAffinity": 0.9,
+	  	"complexity": 2
+	},
+	{ 
+	  "ability": "Gain control of target creature with converted mana cost {N} or less.",
+	  "colors": ["U"], 
+	  "cmc": 5.66,
+	  "sorceryAffinity": 0.75,
+	  "modAffinity": 0.1,
+		"categories" : {
+		  	"effect": ["dominate"]
+	  	},
+		"variability": {
+		     "baseValue": 3,
+		     "deviation": 2,
+		     "variabilityCost": 1.33
+		},
+	  	"complexity": 2
+	},
+	{ 
+	  "ability": "Put {N} +1/+1 counters on target creature.",
+	  "colors": ["G"], 
+	  "cmc": 2,
+	  "sorceryAffinity": 0.33,
+	  "modAffinity": 0.5,
+		"categories" : {
+		  	"effect": ["creatureBuff"],
+		  	"flavor": ["growth"]
+	  	},
+		"variability": {
+		     "baseValue": 2,
+		     "deviation": 2,
+		     "variabilityCost": 1.33
+		}
+	},
+	{ 
+	  "ability": "Distribute {N} +1/+1 counters among any number of target creatures.",
+	  "colors": ["G"], 
+	  "cmc": 3,
+	  "sorceryAffinity": 0.5,
+	  "modAffinity": 0.5,
+		"categories" : {
+		  	"effect": ["creatureBuff"],
+		  	"flavor": ["growth"]
+	  	},
+		"variability": {
+		     "baseValue": 3,
+		     "deviation": 1,
+		     "variabilityCost": 1.33
+		},
+	  	"complexity": 1
+	}
+]

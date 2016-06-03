@@ -1,0 +1,82 @@
+Card/Name Templates
+=======================
+Chain of {THING}
+Beacon of {THING}
+Cone of {} / Incremental
+{THING} Charm
+
+
+NAME TEMPLATES
+==============================
+NOUN NOUN (brain scour, lightning pulse)
+{ENTITY}'S NOUN
+NOUN OF {ENTITY}
+
+ENTITY -> 
+Name: Guff
+Class: Alchemist
+Title: the Watcher
+
+
+CATEGORY MAPPING
+==============================
+
+[category] => [resolvesTo]
+
+effect[landRamp] => flavor[growth]
+effect[creatureRemoval] => quality[detrimental]?
+effect[fog] => quality[reactive]
+effect[toughnessReduction] => effect[creatureRemoval]
+effect[toughnessReduction] => effect[creatureImpairment]
+effect[createTokens] => effect[creatureProliferation]
+
+effect[powerReduction] => effect[creatureDebuff]
+
+effect[cardDraw] => effect[cardImprovement]
+effect[looting] => effect[cardImprovement]
+effect[tutoring] => effect[cardImprovement]
+effect[tutoring] => flavor[planning]
+scope[multiCreature] => scope[multiPermanent]
+
+effect[destroyArtifact] => effect[destroyPermanent]
+effect[destroyEnchantment] => effect[destroyPermanent]
+effect[fog] => effect[damagePrevention]
+effect[damagePrevention] => flavor[protection]
+effect[damagePrevention] => quality[reactive]
+effect[massBoost] => effect[creatureBoost]
+effect[regeneration] => effect[damagePrevention]?
+effect[toughnessIncrease] => protection? shielding?
+effect[bounce] => flavor[voyage, dematerialization]
+effect[flicker] => flavor[voyage, dematerialization]
+effect[twiddle] => flavor[trickery]
+effect[mulch] => effect[cardDraw | cardImprovement]
+effect[regrowth] => effect[cardImprovement]
+effect[regrowth] => quality[beneficial] (prob. via cardImprovement)
+
+green + damage => wind?
+white + removal/damage => justice?
+black + cremate => decay
+white + cremate => purification
+generic "does not effect game state" category (for index, gaea's blessing, cremation, etc.)
+
+more effects to categorize
+==============================
+milling
+falter
+
+other categories
+==============================
+creature-spell related? (for remove soul, aether rift?)
+
+
+verbs
+==============================
+dispel => destroyEnchantment
+
+TO-DO
+==============================
+*** bug with pacts and color/category? (Glacial Pact - Return target card from your graveyard to your hand. pact cost 2G)
+*** Add card type to categories when generating card (as is done for colors)
+*** Add mana cost category (low/high) 
+*** Add category support for a) countables b) object-producing actions
+add support for effect- or set-specific words, i.e. "Phyrexian"/"Praetor's"/"Compleation" for phyrexian mana

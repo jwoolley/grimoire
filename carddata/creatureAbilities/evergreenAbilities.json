@@ -1,0 +1,298 @@
+evergreenAbilities = 
+[
+	{ 
+		"keyword": "flying",
+		"text": "flying",
+		"properKeyword": true,
+		"colors": [
+			{ 
+				"color": "W", 
+				"affinity": ".4",
+				"isBuff": true			
+			},
+			{ 
+				"color": "U", 
+				"affinity": ".3",
+				"isBuff": true	
+			},
+			{ 
+				"color": "B", 
+				"affinity": ".15",
+				"isBuff": true
+			},
+			{ 
+				"color": "R", 
+				"affinity": ".05",
+				"isBuff": true
+			}
+		],
+		"costAdjustment": 0.75
+	},
+	{ 
+		"keyword": "firstStrike",
+		"text": "first strike",
+		"properKeyword": true,		
+		"colors": [
+			{ 
+				"color": "W", 
+				"affinity": ".1",
+				"isBuff": true
+			},
+			{ 
+				"color": "R", 
+				"affinity": ".1",
+				"isBuff": true
+			}			
+		],
+		"costAdjustment": 0.75		
+	},
+	{ 
+		"keyword": "trample",
+		"text": "trample",
+		"properKeyword": true,
+		"colors": [
+			{ 
+				"color": "G", 
+				"affinity": ".1",
+				"isBuff": true
+			},
+			{ 
+				"color": "R", 
+				"affinity": ".05",
+				"isBuff": true
+			}			
+		],
+		"costAdjustment": 0.5,
+		"exclusiveWith": ["defender"]
+	},
+	{ 
+		"keyword": "vigilance",
+		"text": "vigilance",
+		"properKeyword": true,
+		"colors": [
+			{ 
+				"color": "W", 
+				"affinity": ".1",
+				"isBuff": true
+			}
+		],
+		"costAdjustment": 0.5,
+		"exclusiveWith": ["defender"]			
+	},
+	{ 
+		"keyword": "islandwalk",
+		"text": "islandwalk",
+		"properKeyword": true,
+		"colors": [
+			{ 
+				"color": "U", 
+				"affinity": ".05",
+				"isBuff": true
+			}
+		],
+		"costAdjustment": 0.5	,
+		"exclusiveWith": ["defender"]		
+	},
+	{ 
+		"keyword": "mountainwalk",
+		"text": "mountainwalk",
+		"properKeyword": true,
+		"colors": [
+			{ 
+				"color": "R", 
+				"affinity": ".08",
+				"isBuff": true
+			}
+		],
+		"costAdjustment": 0.5,
+		"exclusiveWith": ["defender"]			
+	},	
+	{ 
+		"keyword": "defender",
+		"text": "defender",
+		"properKeyword": true,
+		"colors": [
+			{ 
+				"color": "W", 
+				"affinity": ".05",
+				"isBuff": false
+			},
+			{ 
+				"color": "U",
+				"affinity": ".05",
+				"isBuff": false
+			},
+			{ 
+				"color": "B", 
+				"affinity": ".01",
+				"isBuff": false
+			},
+			{ 
+				"color": "R", 
+				"affinity": ".05",
+				"isBuff": false
+			},
+			{ 
+				"color": "G", 
+				"affinity": ".05",
+				"isBuff": false
+			}			
+		],
+		"costAdjustment": -1.0
+	},
+	{ 
+		"keyword": "deathtouch",
+		"text": "deathtouch",
+		"properKeyword": true,
+		"colors": [
+			{ 
+				"color": "G", 
+				"affinity": ".05",
+				"isBuff": true
+			},
+			{ 
+				"color": "B", 
+				"affinity": ".05",
+				"isBuff": true
+			}	
+		],
+		"costAdjustment": 1		
+	},
+	{ 
+		"keyword": "hexproof",
+		"text": "hexproof",
+		"properKeyword": true,
+		"colors": [
+			{ 
+				"color": "G", 
+				"affinity": ".05",
+				"isBuff": true
+			},
+			{ 
+				"color": "U", 
+				"affinity": ".05",
+				"isBuff": true
+			}			
+		],
+		"costAdjustment": 0.75		
+	},
+	{ 
+		"keyword": "reach",
+		"text": "reach",
+		"properKeyword": true,
+		"colors": [
+			{ 
+				"color": "G", 
+				"affinity": ".125",
+				"isBuff": true
+			}		
+		],
+		"costAdjustment": 0.5	
+	},
+	{ 
+		"keyword": "intimidate",
+		"text": "intimidate",
+		"properKeyword": true,
+		"colors": [
+			{ 
+				"color": "B", 
+				"affinity": ".1",
+				"isBuff": true
+			},
+			{ 
+				"color": "R", 
+				"affinity": ".05",
+				"isBuff": true
+			}				
+		],
+		"costAdjustment": 0.75,
+		"exclusiveWith": ["defender"]
+	},
+	{ 
+		"keyword": "haste",
+		"text": "haste",
+		"properKeyword": true,
+		"colors": [
+			{ 
+				"color": "R", 
+				"affinity": ".15",
+				"isBuff": true
+			}				
+		],
+		"costAdjustment": 0.5,
+		"exclusiveWith": ["defender"]	
+	},
+	{ 
+		"keyword": "lifelink",
+		"text": "lifelink",
+		"properKeyword": true,
+		"colors": [
+			{ 
+				"color": "W", 
+				"affinity": ".08",
+				"isBuff": true
+			},
+			{ 
+				"color": "B", 
+				"affinity": ".05",
+				"isBuff": true
+			}				
+		],
+		"costAdjustment": 0.75
+	},	
+	{ 
+		"keyword": "indestructible",
+		"text": "indestructible",
+		"properKeyword": true,
+		"colors": [
+			{ 
+				"color": "W", 
+				"affinity": ".05",
+				"isBuff": true
+			}				
+		],
+		"costAdjustment": 1.5,
+		"complexity": 2
+	},	
+	{ 
+		"keyword": "doubleStrike",
+		"text": "double strike",
+		"properKeyword": true,		
+		"colors": [
+			{ 
+				"color": "W", 
+				"affinity": ".025",
+				"isBuff": true
+			},
+			{ 
+				"color": "R", 
+				"affinity": ".025",
+				"isBuff": true
+			}				
+		],
+		"costAdjustment": 1.5,
+		"exclusiveWith": ["firstStrike"],
+		"complexity": 1.5			
+	},
+	{ 
+		"keyword": "flash",
+		"text": "flash",
+		"properKeyword": true,
+		"colors": [
+			{ 
+				"color": "U", 
+				"affinity": ".025",
+				"isBuff": true
+			},
+			{ 
+				"color": "G", 
+				"affinity": ".025",
+				"isBuff": true
+			}				
+		],
+		"costAdjustment": 0.66,
+		"complexity": 1.5,			
+		"nonBattlefield": true,
+		"TODO_EXTRACT_THIS_NONCREATURE_KEYWORD_TO_SEPARATE_FILE_WITH_DIFFERENT_SCHEMA": true			
+	}	
+]

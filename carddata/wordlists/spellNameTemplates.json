@@ -1,0 +1,62 @@
+spellNameTemplates = [
+	{
+		"template": "Act of {ABSTRACTNOUN}",
+		"mutableWords": ["abstractNoun"],
+		"color": ["W", "U", "B", "R", "G"]
+	},
+	{
+		"template": "Mark of {ABSTRACTNOUN}",
+		"mutableWords": ["abstractNoun"],
+		"color": ["R", "B", "G"]
+	},
+	{
+		"template": "Essence of {ABSTRACTNOUN}",
+		"mutableWords": ["abstractNoun"],
+		"color": ["W", "U", "B", "R", "G"]
+	},
+	{
+		"template": "Blast of {ABSTRACTNOUN}",
+		"mutableWords": ["abstractNoun"],
+		"color": ["R"]
+	},
+	{
+		"template": "Aspect of {ABSTRACTNOUN}",
+		"mutableWords": ["abstractNoun"],
+		"color": ["W", "G"]
+	},
+	{
+		"template": "Boon of {ABSTRACTNOUN}",
+		"mutableWords": ["abstractNoun"],
+		"color": ["W", "U", "B", "R", "G"]
+	},
+	{
+		"template": "Burden of {ABSTRACTNOUN}",
+		"mutableWords": ["abstractNoun"],
+		"color": ["B"]
+	},
+	{
+		"template": "Call of {ABSTRACTNOUN}",
+		"mutableWords": ["abstractNoun"],
+		"color": ["W", "U", "B", "R", "G"]
+	},
+	{
+		"template": "Chorus of {ABSTRACTNOUN}",
+		"mutableWords": ["abstractNoun"],
+		"color": ["W", "U", "B", "R", "G"]
+	},
+	{
+		"template": "Drown in {ABSTRACTNOUN}",
+		"mutableWords": ["abstractNoun"],
+		"color": ["W", "U", "B", "R", "G"]
+	},
+	{
+		"template": "Bathe in {ABSTRACTNOUN}",
+		"mutableWords": ["abstractNoun"],
+		"color": ["W", "U", "B", "R", "G"]
+	},
+	{
+		"template": "Covenant of {ABSTRACTNOUN}",
+		"mutableWords": ["abstractNoun"],
+		"color": ["W", "U", "B", "R", "G"]
+	}
+]

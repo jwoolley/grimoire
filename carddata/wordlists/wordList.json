@@ -1,0 +1,2269 @@
+wordList = {
+	"adjective": [
+		{
+			"word":	"vile",
+			"category": {
+				"color": ["B"],
+				"creature": [true]
+			}
+		},
+		{
+			"word":	"dark",
+			"category": {
+				"color": ["B"],
+				"creature": [true]
+			}
+		},
+		{
+			"word":	"dementing",
+			"category": {
+				"effect": ["discard"],
+				"flavor": ["insanity"]
+			}
+		},
+		{
+			"word":	"zealous",
+			"category": {
+				"colors": ["W"],
+				"quality": ["proactive"],
+				"creature": [true]
+			}
+		},		
+		{
+			"word":	"preemptive",
+			"category": {
+				"quality": ["proactive"],
+				"flavor": ["martial", "military"]
+			}
+		},	
+		{
+			"word":	"puppeteer's",
+			"category": {
+				"effect": ["twiddle"]
+			}
+		},	
+		{
+			"word":	"pyromancer's",
+			"category": {
+				"effect": ["directDamage"]
+			}
+		},	
+		{
+			"word":	"jolting",
+			"category": {
+				"effect": ["twiddle"]
+			}
+		},			
+		{
+			"word":	"menacing",
+			"category": {
+				"effect": ["threaten"],
+				"creature": [true]
+			}
+		},
+		{
+			"word":	"terrifying",
+			"category": {
+				"color": ["B"]
+			}
+		},
+		{
+			"word":	"white-hot",
+			"category": {
+				"color": ["W", "R"]
+			}
+		},
+		{
+			"word":	"ravenous",
+			"category": {
+				"color": ["B", "G"],
+				"creature": [true]
+			}
+		},
+		{
+			"word":	"gleeful",
+			"category": {
+				"color": ["B", "R"]
+			}
+		},
+		{
+			"word":	"arcane",
+			"category": {
+				"color": ["U", "R", "B"]
+			}
+		},
+		{
+			"word":	"ghostly",
+			"category": {
+				"color": ["W", "U", "B"],
+				"creature": [true]
+			}
+		},
+		{
+			"word":	"ghastly",
+			"category": {
+				"color": ["B"],
+				"creature": [true]
+			}
+		},
+		{
+			"word":	"lethal",
+			"category": {
+				"effect": ["removal"]
+			}
+		},
+		{
+			"word":	"last-ditch",
+			"category": {
+				"quality": ["reactive"]
+			}
+		},
+		{
+			"word":	"despicable",
+			"category": {
+				"color": ["B"]
+			}
+		},
+		{
+			"word":	"inspired",
+			"category": {
+				"color": ["W"],
+				"effect": ["cardImprovement", "cardDraw"]
+			}
+		},
+		{
+			"word":	"dream",
+			"category": {
+				"color": ["U"],
+				"creature": [true],
+				"usage":    ["noun"]
+			}
+		},
+		{
+			"word":	"bold",
+			"category": {
+				"color": ["W", "G"]
+			}
+		},
+		{
+			"word":	"righteous",
+			"category": {
+				"color": ["W"],
+				"flavor": ["justice", "retribution"],
+				"creature": [true]
+			}
+		},	
+		{
+			"word":	"unyielding",
+			"category": {
+				"flavor": ["justice", "retribution"],
+				"creature": [true]
+			}
+		},
+		{
+			"word":	"brutal",
+			"category": {
+				"color": ["B", "R"],
+				"flavor": ["conflict"],
+				"creature": [true]
+			}
+		},
+		{
+			"word":	"languid",
+			"category": {
+				"effect": ["tapDown"],
+				"quality": ["detrimental"]
+			}
+		},
+		{
+			"word":	"divine",
+			"category": {
+				"color": ["W"],
+				"creature": [true]
+			}
+		},
+		{
+			"word":	"mercurial",
+			"category": {
+				"effect": ["random"],
+				"flavor": ["trickery"]
+			},
+			"creature": [true]
+		},
+		{
+			"word":	"mischeivous",
+			"category": {
+				"color": ["U"],
+				"flavor": ["trickery"]
+			},
+			"creature": [true]
+		},
+		{
+			"word":	"chaotic",
+			"category": {
+				"color":  ["R"],
+				"flavor": ["chaotic"]
+			}
+		},
+		{
+			"word":	"calculated",
+			"category": {
+				"color":  ["U"],
+				"flavor": ["chaotic"],
+				"usage":  ["action"]
+			}
+		},
+		{
+			"word":	"coordinated",
+			"category": {
+				"color":  ["W"],
+				"flavor": ["military"],
+				"usage":  ["action"]
+			}
+		},
+		{
+			"word":	"necromancer's",
+			"category": {
+				"color":  ["B"],
+				"flavor": ["necromancy"]
+			}
+		},
+		{
+			"word":	"warrior's",
+			"category": {
+				"color":  ["R"]
+			}
+		},
+		{
+			"word":	"angel's",
+			"category": {
+				"color":  ["W"]
+			}
+		},
+		{
+			"word":	"alchemist's",
+			"category": {
+				"color":  ["U"]
+			}
+		},
+		{
+			"word":	"mage's",
+			"category": {
+				"color":  ["U", "R"]
+			}
+		},
+		{
+			"word":	"voodoo",
+			"category": {
+				"color": ["B"],
+				"effect": ["lifeLoss"],
+				"flavor": ["necromancy"],
+				"usage":    ["noun"]
+			}
+		},	
+		{
+			"word":	"enraging",
+			"category": {
+				"effect": ["powerIncrease"],
+				"usage":  ["action"]
+			}
+		},	
+		{
+			"word":	"furious",
+			"category": {
+				"effect": ["powerIncrease"]
+			},
+			"creature": [true]
+		},
+		{
+			"word":	"frenzied",
+			"category": {
+				"effect": ["powerIncrease"]
+			},
+			"creature": [true]
+		},			
+		{
+			"word":	"maddening",
+			"category": {
+				"effect": ["discard, taunt"],
+				"flavor": ["provocation", "insanity"]
+			}
+		},		
+		{
+			"word":	"bestial",
+			"category": {
+				"color":  ["G"]
+			}
+		},
+		{
+			"word":	"feral",
+			"category": {
+				"color":  ["G"]
+			},
+			"creature": [true]
+		},	
+		{
+			"word":	"sylvan",
+			"category": {
+				"color":  ["G"],
+				"flavor": ["forestMagic"]
+			},
+			"creature": [true]
+		},
+		{
+			"word":	"empowering",
+			"category": {
+				"effect":  ["creatureBuff"],
+				"usage":  ["action"]
+			}
+		},	
+		{
+			"word":	"amplifying",
+			"category": {
+				"effect":  ["creatureBuff"],
+				"usage":  ["action"]
+			}
+		},		
+		{
+			"word":	"canopy",
+			"category": {
+				"color":  ["G"]
+			},
+			"creature": [true]
+		},
+		{
+			"word":	"verdant",
+			"category": {
+				"color":  ["G"],
+				"effect": ["landRamp"],
+				"flavor": ["cultivation", "growth", "forestMagic"]
+			}
+		},
+		{
+			"word":	"bog",
+			"category": {
+				"color":  ["B"],
+				"usage":    ["noun"]
+			},
+			"creature": [true]
+		},
+		{
+			"word":	"solar",
+			"category": {
+				"color":  ["W"]
+			}
+		},
+		{
+			"word":	"mystic",
+			"category": {
+				"color":  ["U"]
+			},
+			"creature": [true]
+		},
+		{
+			"word":	"tidal",
+			"category": {
+				"color":  ["U"],
+				"effect": ["tapDown"]
+			},
+			"creature": [true]
+		},
+		{
+			"word":	"magma",
+			"category": {
+				"color":  ["R"],
+				"effect": ["directDamage", "landBased"],
+				"flavor": ["disaster"],
+				"usage":    ["noun"]
+			},
+			"creature": [true]
+		},
+		{
+			"word":	"tectonic",
+			"category": {
+				"color":  ["R"],
+				"effect":  ["landBased"],
+				"flavor": ["disaster"]
+			}
+		},
+		{
+			"word":	"seismic",
+			"category": {
+				"effect":  ["landBased"],				
+				"flavor": ["disaster"]
+			}
+		},
+		{
+			"word":	"primal",
+			"category": {
+				"color":  ["G"]
+			},
+			"creature": [true]
+		},
+		{
+			"word":	"disdainful",
+			"category": {
+				"color":  ["B"],
+				"effect": ["detrimental"]
+			}
+		},
+		{
+			"word":	"drudge",
+			"category": {
+				"color":  ["B"],
+				"flavor": ["necromancy"],
+				"usage":    ["noun"]
+			},
+			"creature": [true]
+		},
+
+		{
+			"word":	"traitorous",
+			"category": {
+				"effect":  ["threaten"]
+			}
+		},		
+		{
+			"word":	"holy",
+			"category": {
+				"color":  ["W"]
+			}
+		},
+		{
+			"word":	"unholy",
+			"category": {
+				"color":  ["B"]
+			}
+		},
+		{
+			"word":	"destructive",
+			"category": {
+				"color":  ["R"],
+				"effect": ["destroyPermanent"]
+			}
+		},
+		{
+			"word":	"demonic",
+			"category": {
+				"color":  ["B"],
+				"effect": ["tutor"],
+				"quality": ["powerful"]
+			}
+		},
+		{
+			"word":	"witch's",
+			"category": {
+				"color":  ["B"]
+			}
+		},
+		{
+			"word":	"ancient",
+			"category": {
+				"color":  ["U","B","G"]
+			},
+			"creature": [true]
+		},
+		{
+			"word":	"ancestral",
+			"category": {
+				"color":  ["U"],
+				"effect": ["cardDraw"]
+			}
+		},
+		{
+			"word":	"time",
+			"category": {
+				"color":  ["U"],
+				"usage":    ["noun"]
+			}
+		},
+		{
+			"word":	"summoner's",
+			"category": {
+				"color":  ["G"],
+				"effect": ["createTokens"]
+			}
+		},
+		{
+			"word":	"reviving",
+			"category": {
+				"effect": ["regrowth"],
+				"usage":  ["action"]
+			}
+		},
+		{
+			"word":	"glacial",
+			"category": {
+				"color":  ["U"]
+			},
+			"creature": [true]
+		},
+		{
+			"word":	"poisonous",
+			"category": {
+				"color":  ["B"]
+			}
+		},
+		{
+			"word":	"caustic",
+			"category": {
+				"color":  ["B"],
+				"effect": ["directDamage", "toughnessDecrease"],
+				"flavor": ["mutation"]
+			},
+			"creature": [true]
+		},
+		{
+			"word":	"devastating",
+			"category": {
+				"effect": ["massRemoval"]
+			}
+		},		
+		{
+			"word":	"cataclysmic",
+			"category": {
+				"effect": ["massRemoval"]
+			}
+		},
+		{
+			"word":	"nature's",
+			"category": {
+				"color": ["G"]
+			}
+		},
+		{
+			"word":	"hunter's",
+			"category": {
+				"color": ["G"]
+			}
+		},					
+		{
+			"word":	"damping",
+			"category": {
+				"effect": ["milling"]
+			}
+		},
+		{
+			"word":	"enslaving",
+			"category": {
+				"effect": ["dominate"]
+			}
+		},
+		{
+			"word":	"enthralling",
+			"category": {
+				"effect": ["dominate", "taunt", "fog", "cantAttack"]
+			}
+		},
+		{
+			"word":	"entrancing",
+			"category": {
+				"effect": ["dominate", "taunt"]
+			}
+		},
+		{
+			"word":	"cowing",
+			"category": {
+				"effect": ["falter"]
+			}
+		},
+		{
+			"word":	"faltering",
+			"category": {
+				"effect": ["falter"]
+			}
+		},
+		{
+			"word":	"grinding",
+			"category": {
+				"effect": ["milling"]
+			}
+		},
+		{
+			"word":	"mutagenic",
+			"category": {
+				"flavor": ["mutation"]
+			}
+		},
+		{
+			"word":	"benevolent",
+			"category": {
+				"color":  ["W"],
+				"effect": ["damagePrevention", "toughnessIncrease"],
+				"quality": ["beneficial"],
+				"creature": [true]
+			}
+		},
+		{
+			"word":	"nourishing",
+			"category": {
+				"effect":   ["lifegain"]
+			}
+		},		
+		{
+			"word":	"healing",
+			"category": {
+				"effect":   ["lifegain", "damagePrevention"]
+			}
+		},
+		{
+			"word":	"blessed",
+			"category": {
+				"color":   ["W"]
+			}
+		},		
+		{
+			"word":	"malevolent",
+			"category": {
+				"color":   ["B"],
+				"effect":  ["toughnessDecrease"],
+				"quality": ["detrimental"]
+			}
+		},
+		{
+			"word":	"plague",
+			"category": {
+				"color":   ["B"],
+				"creature": [true],
+				"usage":    ["noun"],
+				"usage":    ["noun"]
+			}
+		},
+		{
+			"word":	"death",
+			"category": {
+				"color":   ["B"],
+				"effect":  ["removal", "lifeLoss"],
+				"creature": [true],
+				"usage":    ["noun"],
+				"usage":    ["noun"]
+			}
+		},
+		{
+			"word":	"transcendant",
+			"category": {
+				"color":  ["W"],
+				"quality": ["beneficial"]
+			}
+		},
+		{
+			"word":	"essence",
+			"category": {
+				"color" : ["U"],
+				"effect": ["creatureBased"],
+				"usage":    ["noun"]
+			}
+		},	
+		{
+			"word":	"whelming",
+			"category": {
+				"effect" : ["bounce"]
+			}
+		},
+		{
+			"word":	"banishing",
+			"category": {
+				"effect" : ["bounce"]
+			}
+		},
+		{
+			"word":	"flash",
+			"category": {
+				"spellType" : ["instant"],
+				"usage":    ["noun"]
+			}
+		},
+		{
+			"word":	"distracting",
+			"category": {
+				"effect" : ["cantAttack", "falter", "manaLeak"]
+			}
+		},	
+		{
+			"word":	"pilgrim's",
+			"category": {
+				"color" : ["W"]
+			}
+		},		
+		{
+			"word":	"calming",
+			"category": {
+				"effect" : ["fog", "cantAttack"]
+			}
+		},	
+		{
+			"word":	"tempting",
+			"category": {
+				"effect" : ["taunt"],
+				"flavor": ["faustian"]
+			}
+		},		
+		{
+			"word":	"doubling",
+			"category": {
+				"effect" : ["clone"]
+			}
+		},
+		
+		{
+			"word":	"mirror",
+			"category": {
+				"effect" : ["clone", "deflection"],
+				"creature": [true],
+				"usage":    ["noun"]
+			}
+		},					
+		{
+			"word":	"doom",
+			"category": {
+				"color" : ["B"],
+				"creature": [true],
+				"usage":    ["noun"]
+			}
+		},
+		{
+			"word":	"abominable",
+			"category": {
+				"color" : ["B"],
+				"flavor": ["faustian"],
+				"creature": [true]
+			}
+		},
+		{
+			"word":	"justicar's",
+			"category": {
+				"flavor" : ["justice", "retribution"]
+			}
+		},
+		{
+			"word":	"profane",
+			"category": {
+				"color" : ["B"],
+				"creature": [true]
+			}
+		},	
+		{
+			"word":	"withering",
+			"category": {
+				"effect" : ["lifeLoss", "toughnessDecrease"]
+			}
+		},
+		{
+			"word":	"prolific",
+			"category": {
+				"effect": ["createTokens"]
+			}
+		},
+		{
+			"word":	"breeding",
+			"category": {
+				"effect": ["createTokens"]
+			}
+		},
+		{
+			"word":	"blood",
+			"category": {
+				"effect" : ["lifeLoss"],
+				"flavor": ["vampirism"],
+				"creature": [true],
+				"usage":    ["noun"]
+			}
+		},
+		{
+			"word":	"sanguine",
+			"category": {
+				"effect" : ["lifeLoss"],
+				"flavor": ["vampirism"],
+				"creature": [true]
+			}
+		},
+		{
+			"word":	"hindering",
+			"category": {
+				"effect" : ["counterspell"]
+			}
+		},
+		{
+			"word":	"confounding",
+			"category": {
+				"effect" : ["counterspell"]
+			}
+		},		
+		{
+			"word":	"null",
+			"category": {
+				"effect" : ["counterspell"],
+				"creature": [true]				
+			}
+		},
+		{
+			"word":	"brilliant",
+			"category": {
+				"color": ["W"],
+				"effect": ["cardImprovement", "cardDraw"]
+			}
+		},
+		{
+			"word":	"rummaging",
+			"category": {
+				"effect": ["selfMill", "looting"],
+				"creature": [true]				
+			}
+		},		
+		{
+			"word":	"brain",
+			"category": {
+				"effect": ["cardImprovement", "cardDraw", "discard"],
+				"usage":    ["noun"]
+			}
+		},	
+		{
+			"word":	"lightning",
+			"category": {
+				"effect": ["directDamage", "haste"],
+				"creature": [true]				
+			}
+		},
+		{
+			"word":	"pain",
+			"category": {
+				"effect": ["lifeLoss"],
+				"creature": [true],
+				"usage":    ["noun"]
+			}
+		},
+		{
+			"word":	"guff's",
+			"category": {
+				"color": ["W"],
+				"creature": [true]
+			}
+		},
+		{
+			"word":	"ajani's",
+			"category": {
+				"color": ["W"],
+				"creature": [true]
+			}
+		},
+		{
+			"word":	"elspeth's",
+			"category": {
+				"color": ["W"],
+				"creature": [true]
+			}
+		},
+		{
+			"word":	"gideon's",
+			"category": {
+				"color": ["W"],
+				"creature": [true]
+			}
+		},	
+		{
+			"word":	"feroz's",
+			"category": {
+				"effect": ["createTokens"],
+				"creature": [true]
+			}
+		},	
+		{
+			"word":	"worzel's",
+			"category": {
+				"color": ["G"],
+				"creature": [true]
+			}
+		},		
+		{
+			"word":	"freyalise's",
+			"category": {
+				"color": ["G"],	
+				"creature": [true]
+			}
+		},		
+		{
+			"word":	"titania's",
+			"category": {
+				"color": ["G"],
+				"creature": [true]
+			}
+		},
+		{
+			"word":	"drabk's",
+			"category": {
+				"color": ["U"],
+				"creature": [true]
+			}
+		},	
+		{
+			"word":	"jace's",
+			"category": {
+				"color": ["U"],
+				"effect": ["milling"],
+				"creature": [true]
+			}
+		},	
+		{
+			"word":	"teferi's",
+			"category": {
+				"color": ["U"],
+				"creature": [true]
+			}
+		},	
+		{
+			"word":	"venser's",
+			"category": {
+				"color": ["U"],
+				"creature": [true]
+			}
+		},		
+		{
+			"word":	"tamiyo's",
+			"category": {
+				"color": ["U"],
+				"creature": [true]
+			}
+		},			
+		{
+			"word":	"tezzeret's",
+			"category": {
+				"color": ["U"],
+				"creature": [true],
+				"caresAbout": ["artifact"]
+			}
+		},				
+		{
+			"word":	"marduk's",
+			"category": {
+				"color": ["U", "B"],
+				"creature": [true]
+			}
+		},				
+		{
+			"word":	"windgrace's",
+			"category": {
+				"color": ["R"],
+				"creature": [true]
+			}
+		},						
+		{
+			"word":	"chandra's",
+			"category": {
+				"color": ["R"],
+				"creature": [true]
+			}
+		},						
+		{
+			"word":	"koth's",
+			"category": {
+				"color": ["R"],
+				"creature": [true]
+			}
+		},					
+		{
+			"word":	"Lim-D&#251;&#x6C;'s",
+			"category": {
+				"color": ["B"],
+				"creature": [true]
+			}
+		},			
+		{
+			"word":	"kazz's",
+			"category": {
+				"color": ["R"],
+				"creature": [true]
+			}
+		},		
+		{
+			"word":	"zakk's",
+			"category": {
+				"color": ["B"],
+				"creature": [true]
+			}
+		},				
+		{
+			"word":	"oona's",
+			"category": {
+				"creatureTypes": ["faerie"]
+			}
+		},			
+		{
+			"word":	"sarkhan's",
+			"category": {
+				"creatureTypes": ["dragon"]
+			}
+		}	
+	],
+	"noun": [
+		{
+			"word":	"blast",
+			"category": {
+				"effect": ["removal", "destroyPermanent", "directDamage", "counterspell"],
+				"scope": ["multiPermanent"],
+				"usage": ["compound"]
+			}
+		},
+		{
+			"word":	"grind",
+			"category": {
+				"effect": ["milling"],
+				"usage": ["compound"]
+			}
+		},
+		{
+			"word":	"fugue",
+			"category": {
+				"color": ["B"],
+				"effect": ["discard", "powerDecrease", "toughnessDecrease", "tapDown"],
+				"quality": ["detrimental"],
+				"usage": ["compound"]
+			}
+		},
+		{
+			"word":	"action",
+			"category": {
+				"color": ["W"],
+				"effect": ["combatTrick"],
+				"quality": ["beneficial"],
+				"flavor":	["military", "martial"]
+			}
+		},
+		{
+			"word":	"surge",
+			"category": {
+				"color": ["G"],
+				"effect": ["combatTrick", "creatureBuff", "massBuff"],
+				"cost": ["hasXCost"],
+				"quality": ["beneficial"],
+				"usage": ["compound"]
+			}
+		},
+		{
+			"word":	"scream",
+			"category": {
+				"color": ["B"],
+				"effect": ["combatTrick"],
+				"cost": ["hasXCost"]
+			}
+		},
+		{
+			"word":	"tutor",
+			"category": {
+				"effect": ["tutor"]
+			}
+		},
+		{
+			"word": "wave",
+			"category": {
+				"color": ["U"],
+				"effect": ["bounce"],
+				"scope": ["multiPermanent"],
+				"usage": ["compound"]
+			}
+		},
+		{
+			"word":	"hex",
+			"category": {
+				"color": ["B"],
+				"effect": ["powerDecrease", "removal"],
+				"usage": ["compound"]
+			}
+		},
+		{
+			"word":	"explosion",
+			"category": {
+				"color": ["R"],
+				"effect": ["directDamage", "destroyPermanent"]
+			}
+		},
+		{
+			"word":	"silence",
+			"category": {
+				"effect": ["counterspell", "fog", "damagePrevention"],
+				"sense": ["ideal"]
+			}
+		},
+		{
+			"word":	"chorus",
+			"category": {
+				"quality": ["massBuff"]
+			}
+		},
+		{
+			"word":	"dirge",
+			"category": {
+				"color": ["B"],
+				"spellType": ["sorcery"],
+				"usage": ["compound"]
+			}
+		},
+		{
+			"word":	"chant",
+			"category": {
+				"color": ["W", "U", "B", "R", "G"]
+			}
+		},
+		{
+			"word":	"echo",
+			"category": {
+				"color": ["W", "U", "B", "R"]
+			}
+		},
+		{
+			"word":		"beam",
+			"category": {
+				"effect":	["destroyPermanent"],
+				"scope":	["multiCreature"]
+			}
+		},
+		{
+			"word":		"maneuver",
+			"category": {
+				"effect":	["combatTrick"],
+				"flavor":	["military", "martial"]
+			}
+		},
+		{
+			"word":		"plan",
+			"category": {
+				"effect":	["cardBenefit"],
+				"flavor":	["military"]
+			}
+		},
+		{
+			"word":		"lull",
+			"category": {
+				"effect":	["fog"],
+				"usage": ["compound"]
+			}
+		},
+		{
+			"word":	"blaze",
+			"category": {
+				"color": ["R"],
+				"effect": ["directDamage"]
+			}
+		},
+		{
+			"word":	"instincts",
+			"category": {
+				"effect": ["mulch"],
+				"flavor": ["mulch"]
+			}
+		},
+		{
+			"word":	"insight",
+			"category": {
+				"effect": ["cardImprovement", "cardDraw"],
+				"sense": ["ideal"]
+			}
+		},
+		{
+			"word":	"intuition",
+			"category": {
+				"effect": ["cardImprovement", "cardDraw"],
+				"sense": ["ideal"]
+			}
+		},
+		{
+			"word":	"flame",
+			"category": {
+				"color": ["R"],
+				"effect": ["directDamage"],
+				"sense": ["ideal"],
+				"usage": ["compound"]
+			}
+		},
+		{
+			"word":	"scheme",
+			"category": {
+				"color": ["U"],
+				"effect": ["libraryManipulation"]
+			}
+		},
+		{
+			"word":	"stroke",
+			"category": {
+				"color": ["U"],
+				"effect": ["libraryManipulation"],
+				"usage": ["compound"]
+			}
+		},
+		{
+			"word":	"flood",
+			"category": {
+				"color": ["U"],
+				"usage": ["compound"]
+			}
+		},
+
+		{
+			"word":	"blessing",
+			"category": {
+				"color": ["W"],
+				"effect": ["damagePrevention, lifegain"],
+				"quality": ["beneficial"]
+			}
+		},
+		{
+			"word":	"boon",
+			"category": {
+				"effect": ["creatureBuff, lifegain"],
+				"quality": ["beneficial"],
+				"usage": ["compound"]
+			}
+		},
+		{
+			"word":	"growth",
+			"category": {
+				"color": ["G"],
+				"effect": ["powerIncrease", "landRamp"],
+				"flavor": ["growth", "cultivation"],
+				"sense": ["ideal"]
+			}
+		},
+		{
+			"word":	"bolt",
+			"category": {
+				"effect": ["directDamage"],
+				"usage": ["compound"]
+			}
+		},
+		{
+			"word":	"secret",
+			"category": {
+				"color": ["U"],
+				"effect": ["libraryManipulation"]
+			}
+		},
+		{
+			"word":	"spiral",
+			"category": {
+				"color": ["U", "B"],
+				"effect": ["powerful"]
+			}
+		},
+		{
+			"word":	"decree",
+			"category": {
+				"color": ["W", "U", "B", "R", "G"],
+				"effect": ["massBuff", "multiCreature"],
+				"flavor": ["imperative"]
+			}
+		},
+		{
+			"word":	"judgement",
+			"category": {
+				"flavor": ["justice", "retribution"],
+				"sense": ["ideal"]
+			}
+		},
+		{
+			"word":	"justice",
+			"category": {
+				"flavor": ["justice", "retribution"],
+				"sense": ["ideal"]
+			}
+		},
+		{
+			"word":	"retribution",
+			"category": {
+				"flavor": ["justice", "retribution"],
+				"sense": ["ideal"]
+			}
+		},
+		{
+			"word":	"verdict",
+			"category": {
+				"flavor": ["justice", "retribution"]
+			}
+		},
+		{
+			"word":	"ruse",
+			"category": {
+				"effect": ["combatTrick"],
+				"quality": ["reactive"],
+				"flavor": ["trickery"]
+			}
+		},
+		{
+			"word":	"haze",
+			"category": {
+				"effect": ["fog"],
+				"usage": ["compound"]
+			}
+		},
+		{
+			"word":	"fog",
+			"category": {
+				"effect": ["fog"],
+				"usage": ["compound"]
+			}
+		},
+		{
+			"word":	"ritual",
+			"category": {
+				"color": ["R", "B"],
+				"effect": ["sacrifice", "manaAcceleration"]
+			}
+		},
+		{
+			"word":	"howl",
+			"category": {
+				"effect": ["creatureBuff"],
+				"usage": ["compound"]
+			}
+		},
+		{
+			"word":	"procession",
+			"category": {
+				"effect": ["createTokens"]
+			}
+		},
+		{
+			"word":	"reinforcements",
+			"category": {
+				"effect": ["createTokens"]
+			}
+		},
+		{
+			"word":	"rebirth",
+			"category": {
+				"flavor": ["rebirth"],
+				"sense": ["ideal"]
+			}
+		},
+		{
+			"word":	"summons",
+			"category": {
+				"effect": ["createTokens"]
+			}
+		},
+		{
+			"word":	"genesis",
+			"category": {
+				"effect": ["createTokens"]
+			}
+		},
+		{
+			"word":	"call",
+			"category": {
+				"effect": ["createTokens"]
+			}
+		},
+		{
+			"word":	"birthing",
+			"category": {
+				"effect": ["createTokens"]
+			}
+		},
+		{
+			"word":	"ray",
+			"category": {
+				"color": ["W", "U", "B", "R", "G"],
+				"effect": ["directDamage", "destroyPermanent", "creatureBuff", "creatureDebuff"],
+			}
+		},
+		{
+			"word":	"strike",
+			"category": {
+				"effect": ["combatTrick", "creatureRemoval"],
+				"flavor":	["military", "martial"],
+				"usage": ["compound"]
+			}
+		},
+		{
+			"word":	"pulse",
+			"category": {
+				"color": ["W", "U", "B", "R", "G"],
+				"effect": ["directDamage", "creatureRemoval"],
+				"scope":	["creature", "player"],
+				"usage": ["compound"]
+			}
+		},
+		{
+			"word":	"flash",
+			"category": {
+				"spellType": ["instant"]
+			}
+		},	
+		{
+			"word":	"charge",
+			"category": {
+				"effect": ["creatureBuff", "massBuff"]
+			}
+		},
+		{
+			"word":	"mutation",
+			"category": {
+				"effect": ["powerIncrease", "powerDecrease"],
+				"flavor": ["mutation"],
+				"sense": ["ideal"]
+			}
+		},
+		{
+			"word":	"fissure",
+			"category": {
+				"effect": ["bounce"]
+			}
+		},
+		{
+			"word":	"swap",
+			"category": {
+				"effect": ["exchange"]
+			}
+		},
+		{
+			"word":	"image",
+			"category": {
+				"effect": ["clone"]
+			}
+		},
+		{
+			"word":	"simulacrum",
+			"category": {
+				"effect": ["clone"]
+			}
+		},
+		{
+			"word":	"unmaking",
+			"category": {
+				"effect": ["bounce"],
+				"sense": ["ideal"]
+			}
+		},
+		{
+			"word":	"favor",
+			"category": {
+				"effect": ["creatureBuff", "damagePrevention"],
+				"quality": ["beneficial"]
+			}
+		},
+		{
+			"word":	"mastery",
+			"category": {
+				"flavor": ["military", "powerful"],
+				"sense": ["ideal"]
+			}
+		},
+		{
+			"word":	"essence",
+			"category": {
+				"effect": ["lifegain"]
+			}
+		},
+
+		{
+			"word":	"taunt",
+			"category": {
+				"effect": ["taunt"],
+				"flavor": ["provocation"],
+				"usage": ["compound"]
+			}
+		},
+		{
+			"word":	"ambush",
+			"category": {
+				"effect": ["provoke"],
+				"flavor": ["military", "ambush"]
+			}
+		},
+		{
+			"word":	"rush",
+			"category": {
+				"effect": ["haste", "massBufff"],
+				"flavor": ["ambush"]
+			}
+		},
+		{
+			"word":	"flicker",
+			"category": {
+				"effect": ["flicker"],
+				"usage": ["compound"]
+			}
+		},
+		{
+			"word":	"blink",
+			"category": {
+				"effect": ["flicker"],
+				"usage": ["compound"]
+			}
+		},
+		{
+			"word":	"stutter",
+			"category": {
+				"effect": ["flicker", "counterspell"],
+				"usage": ["compound"]
+			}
+		},
+		{
+			"word":	"bargain",
+			"category": {
+				"quality": ["powerful"],
+				"flavor": ["faustian"]
+			}
+		},	
+		{
+			"word":	"glare",
+			"category": {
+				"effect": ["falter", "removal"],
+				"sense": ["ideal"],
+				"usage": ["compound"]
+			}
+		},
+		{
+			"word":	"lightning",
+			"category": {
+				"effect": ["directDamage"],
+				"sense": ["ideal"]
+			}
+		},	
+
+		{
+			"word":	"harvest",
+			"category": {
+				"effect": ["sacrifice"],
+				"flavor": ["vampirism"],
+				"usage": ["compound"]
+			}
+		},	
+		{
+			"word":	"siphon",
+			"category": {
+				"flavor": ["vampirism"],
+				"usage": ["compound"]
+			}
+		},	
+		{
+			"word":	"feast",
+			"category": {
+				"flavor": ["vampirism"]
+			}
+		},
+		{
+			"word":	"bite",
+			"category": {
+				"effect": ["lifeLoss", "toughnessDecrease"]
+			}
+		},	
+		{
+			"word":	"wound",
+			"category": {
+				"effect": ["lifeLoss", "toughnessDecrease"]
+			}
+		},					
+		{
+			"word":	"syphon",
+			"category": {
+				"flavor": ["vampirism"]
+			}
+		},
+		{
+			"word":	"malediction",
+			"category": {
+				"effect": ["lifeLoss", "toughnessDecrease"],
+				"sense": ["ideal"]
+			}
+		},					
+		{
+			"word":	"light",
+			"category": {
+				"color":  ["W"],
+				"effect": ["lifegain"],
+				"sense": ["ideal"],
+				"usage": ["compound"]
+			}
+		},	
+		{
+			"word":	"divination",
+			"category": {
+				"effect": ["cardImprovement", "cardDraw"],
+				"sense": ["ideal"]
+			}
+		},
+		{
+			"word":	"conjuring",
+			"category": {
+				"flavor": ["necromancy"],
+				"sense": ["ideal"]
+			}
+		},
+		{
+			"word":	"revelation",
+			"category": {
+				"effect": ["cardImprovement", "cardDraw"],
+				"sense": ["ideal"]
+			}
+		},
+		{
+			"word":	"betrayal",
+			"category": {
+				"effect": ["threaten"],
+				"sense": ["ideal"]
+			}
+		},
+		{
+			"word":	"mutiny",
+			"category": {
+				"effect": ["threaten"],
+				"sense": ["ideal"]
+			}
+		},
+
+		{
+			"word":	"regrowth",
+			"category": {
+				"effect": ["regrowth"],
+				"sense": ["ideal"]
+			}
+		},		
+		{
+			"word":	"excavation",
+			"category": {
+				"effect": ["milling", "mulch", "selfMill", "regrowth"],
+				"sense": ["ideal"]
+			}
+		},	
+		{
+			"word":	"delve",
+			"category": {
+				"effect": ["milling", "mulch", "selfMill"],
+				"usage": ["compound"]
+			}
+		},	
+		{
+			"word":	"search",
+			"category": {
+				"effect": ["looting", "selfMill"]
+			}
+		},
+		{
+			"word":	"voyage",
+			"category": {
+				"effect": ["landRamp"],
+				"flavor": ["voyage"]
+			}
+		},
+		{
+			"word":	"wrath",
+			"category": {
+				"effect": ["massRemoval"],
+				"sense": ["ideal"],
+				"usage": ["compound"]
+			}
+		},		
+		{
+			"word":	"ruin",
+			"category": {
+				"effect": ["massRemoval",  "stoneRain"],
+				"sense": ["ideal"],
+				"usage": ["compound"]
+			}
+		},		
+		{
+			"word":	"extinction",
+			"category": {
+				"effect": ["massRemoval"],
+				"sense": ["ideal"]
+			}
+		},
+		{
+			"word":	"erasure",
+			"category": {
+				"effect": ["milling"],
+				"sense": ["ideal"]
+			}
+		},	
+		{
+			"word":	"fury",
+			"category": {
+				"effect": ["powerIncrease", "creatureBuff"],
+				"sense": ["ideal"]
+			}
+		},
+		{
+			"word":	"festival",
+			"category": {
+				"color": ["W", "B", "G"]
+			}
+		},
+		{
+			"word":	"glamer",
+			"category": {
+				"effect": ["dominate"],
+				"usage": ["compound"]
+			}
+		},
+		{
+			"word":	"seduction",
+			"category": {
+				"effect": ["dominate"],
+				"sense": ["ideal"]
+			}
+		},
+		{
+			"word":	"allure",
+			"category": {
+				"effect": ["dominate"],
+				"sense": ["ideal"]
+			}
+		}																	
+	],
+	"verb": [
+		{
+			"word":	"garrote",
+			"category": {
+				"effect": ["removal"]
+			}
+		},	
+		{
+			"word":	"fluster",
+			"category": {
+				"effect": ["counterspell"],
+				"usage": ["compound"]
+			}
+		},		
+		{
+			"word":	"unravel",
+			"category": {
+				"effect": ["discard"]
+			}
+		},		
+		{
+			"word":	"frustrate",
+			"category": {
+				"effect": ["counterspell"]
+			}
+		},		
+		{
+			"word":	"baffle",
+			"category": {
+				"effect": ["counterspell"],
+				"usage": ["compound"]
+			}
+		},		
+		{
+			"word":	"swindle",
+			"category": {
+				"effect": ["exchange"],
+				"usage": ["compound"]
+			}
+		},		
+		{
+			"word":	"betray",
+			"category": {
+				"effect": ["threaten", "dominate"]
+			}
+		},			
+		{
+			"word":	"multiply",
+			"category": {
+				"effect": ["createTokens"]
+			}
+		},		
+		{
+			"word":	"germinate",
+			"category": {
+				"effect": ["landRamp"],
+				"flavor":  ["cultivation"]
+			}
+		},	
+		{
+			"word":	"repress",
+			"category": {
+				"effect": ["counterspell"]
+			}
+		},		
+		{
+			"word":	"strangulate",
+			"category": {
+				"effect": ["removal"]
+			}
+		},		
+		{
+			"word":	"throttle",
+			"category": {
+				"effect": ["removal"]
+			}
+		},	
+		{
+			"word":	"adumbrate",
+			"category": {
+				"effect": ["clone"]
+			}
+		},	
+		{
+			"word":	"prognosticate",
+			"category": {
+				"effect": ["browse"]
+			}
+		},	
+		{
+			"word":	"obfuscate",
+			"category": {
+				"effect": ["hexproof", "counterspell"]
+			}
+		},	
+		{
+			"word":	"burden",
+			"category": {
+				"effect": ["discard"]
+			}
+		},	
+		{
+			"word":	"agonize",
+			"category": {
+				"effect": ["toughnessDecrease", "lifeLoss"]
+			}
+		},	
+		{
+			"word":	"beleaguer",
+			"category": {
+				"effect": ["creatureDebuff", "toughnessDecrease", "tapDown"]
+			}
+		},	
+		{
+			"word":	"nudge",
+			"category": {
+				"effect": ["twiddle"]
+			}
+		},	
+		{
+			"word":	"lacerate",
+			"category": {
+				"effect": ["lifeLoss", "toughnessDecrease"]
+			}
+		},	
+		{
+			"word":	"exasperate",
+			"category": {
+				"effect": ["counterspell", "tapDown"]
+			}
+		},	
+		{
+			"word":	"placate",
+			"category": {
+				"effect": ["fog", "powerDecrease", "cantAttack"]
+			}
+		},	
+		{
+			"word":	"heckle",
+			"category": {
+				"effect": ["provoke"],
+				"flavor": ["provocation"]
+			}
+		},	
+		{
+			"word":	"begrudge",
+			"category": {
+				"effect": ["creatureDebuff"]
+			}
+		},	
+		{
+			"word":	"empower",
+			"category": {
+				"effect": ["creatureBuff", "powerIncrease"]
+			}
+		},	
+		{
+			"word":	"vaporize",
+			"category": {
+				"effect": ["flicker", "bounce"],
+				"flavor": ["dematerialization"]
+			}
+		},	
+		{
+			"word":	"catechize",
+			"category": {
+				"effect": ["discard", "dominate"],
+				"flavor": ["brainwashing"]
+			}
+		},	
+		{
+			"word":	"overpower",
+			"category": {
+				"effect": ["counterspell", "threaten", "falter"]
+			}
+		},	
+		{
+			"word":	"exterminate",
+			"category": {
+				"effect": ["removal", "massRemoval"]
+			}
+		},	
+		{
+			"word":	"mangle",
+			"category": {
+				"effect": ["removal", "powerDecrease"]
+			}
+		},	
+		{
+			"word":	"begird",
+			"category": {
+				"effect": ["toughnessIncrease", "damagePrevention", "protection"]
+			}
+		},	
+		{
+			"word":	"engulf",
+			"category": {
+				"effect": ["bounce", "tapDown"]
+			}
+		},	
+		{
+			"word":	"spoliate",
+			"category": {
+				"effect": ["destroyPermanent", "stoneRain"],
+				"flavor": ["plunder"]
+			}
+		},	
+		{
+			"word":	"bedim",
+			"category": {
+				"effect": ["powerDecrease", "creatureDebuff", "discard"]
+			}
+		},	
+		{
+			"word":	"energize",
+			"category": {
+				"effect": ["powerIncrease", "creatureBuff", "untap"]
+			}
+		},	
+		{
+			"word":	"expel",
+			"category": {
+				"effect": ["exile", "bounce"]
+			}
+		},	
+		{
+			"word":	"saturate",
+			"category": {
+				"effect": ["sleight", "tapDown"]
+			}
+		},
+		{
+			"word":	"catalyze",
+			"category": {
+				"effect": ["untap"],
+			}
+		},
+		{
+			"word":	"assuage",
+			"category": {
+				"effect": ["damagePrevention"],
+			}
+		},
+		{
+			"word":	"abate",
+			"category": {
+				"effect": ["damagePrevention", "fog"],
+			}
+		},
+		{
+			"word":	"revitalize",
+			"category": {
+				"effect": ["lifegain", "untap"],
+			}
+		},
+		{
+			"word":	"succor",
+			"category": {
+				"effect": ["damagePrevention", "lifegain"],
+			}
+		},
+		{
+			"word":	"renew",
+			"category": {
+				"effect": ["damagePrevention", "lifegain"],
+			}
+		},
+		{
+			"word":	"contradict",
+			"category": {
+				"effect": ["counterspell"],
+			}
+		},
+		{
+			"word":	"aggrandize",
+			"category": {
+				"effect": ["powerIncrease", "creatureBuff"],
+			}
+		},
+		{
+			"word":	"contemplate",
+			"category": {
+				"effect": ["cardDraw", "browse"],
+				"flavor": ["study"]
+			}
+		},
+		{
+			"word":	"ruminate",
+			"category": {
+				"effect": ["cardDraw", "browse"],
+				"flavor": ["study"]
+			}
+		},
+		{
+			"word":	"descry",
+			"category": {
+				"effect": ["cardDraw", "browse", "scry"],
+				"flavor": ["study"]
+			}
+		},	
+		{
+			"word":	"exhaust",
+			"category": {
+				"effect": ["tapDown", "cantAttack"]
+			}
+		}																			
+	],
+	"abstractNoun": [
+		{
+			"word":	"indoctrination",
+			"category": {
+				"effect": ["dominate"]
+			}
+		},
+		{
+			"word":	"summoning",
+			"category": {
+				"effect": ["createTokens"]
+			}
+		},
+		{
+			"word":	"becoming",
+			"category": {
+				"effect": ["createTokens"]
+			}
+		},		
+		{
+			"word":	"tyranny",
+			"category": {
+				"effect": ["lifeLoss", "threaten", "dominate"]
+			}
+		},
+		{
+			"word":	"aggression",
+			"category": {
+				"color": ["R"],
+				"effect": ["threaten", "provoke"],
+				"flavor":  ["provocation"]
+			}
+		},
+		{
+			"word":	"subjugation",
+			"category": {
+				"effect": ["dominate"]
+			}
+		},
+		{
+			"word":	"salvation",
+			"category": {
+				"effect": ["damagePrevention", "lifegain", "protection"]
+			}
+		},
+		{
+			"word":	"retribution",
+			"category": {
+				"flavor": ["retribution"]
+			}
+		},
+		{
+			"word":	"lunacy",
+			"category": {
+				"effect": ["threaten"],
+				"flavor": ["retribution"]
+			}
+		},
+		{
+			"word":	"fury",
+			"category": {
+				"effect": ["powerIncrease"],
+				"usage": ["compound"]
+			}
+		},
+		{
+			"word":	"precognition",
+			"category": {
+				"effect": ["browse"]
+			}
+		},
+		{
+			"word":	"scrutiny",
+			"category": {
+				"effect": ["looting", "cardDraw", "browse"]
+			}
+		},
+		{
+			"word":	"inquiry",
+			"category": {
+				"effect": ["looting", "cardDraw", "browse"]
+			}
+		},
+		{
+			"word":	"dismissal",
+			"category": {
+				"effect": ["counterspell"]
+			}
+		},
+		{
+			"word":	"contemplation",
+			"category": {
+				"effect": ["browse, cardDraw"]
+			}
+		},	
+		{
+			"word":	"providence",
+			"category": {
+				"effect": ["damagePrevention", "lifegain", "protection"],
+			}
+		},
+		{
+			"word":	"mercy",
+			"category": {
+				"effect": ["damagePrevention", "protection"]
+			}
+		},
+		{
+			"word":	"bravery",
+			"category": {
+				"effect": ["creatureBuff"],
+			}
+		},
+		{
+			"word":	"prosperity",
+			"category": {
+				"effect": ["cardDraw", "landRamp"],
+			}
+		},
+		{
+			"word":	"exuberance",
+			"category": {
+				"effect": ["creatureBuff", "haste"],
+			}
+		},
+		{
+			"word":	"zeal",
+			"category": {
+				"effect": ["creatureBuff", "haste"],
+				"usage": ["compound"]
+			}
+		},
+		{
+			"word":	"fervor",
+			"category": {
+				"color": ["R"],
+				"effect": ["creatureBuff", "haste"]
+			}
+		},
+		{
+			"word":	"ferocity",
+			"category": {
+				"effect": ["creatureBuff", "powerIncrease", "trample"],
+			}
+		},
+		{
+			"word":	"misery",
+			"category": {
+				"color": ["B"],
+			}
+		},
+		{
+			"word":	"malice",
+			"category": {
+				"color": ["B"],
+			}
+		},
+		{
+			"word":	"hate",
+			"category": {
+				"color": ["B"],
+				"usage": ["compound"]	
+			}
+		},
+		{
+			"word":	"devotion",
+			"category": {
+				"color": ["W"],
+			}
+		},
+		{
+			"word":	"abundance",
+			"category": {
+				"color": ["G"],
+			}
+		},	
+		{
+			"word":	"conviction",
+			"category": {
+				"color": ["W"],
+			}
+		},
+		{
+			"word":	"destruction",
+			"category": {
+				"effect": ["destroyPermanent", "stoneRain"],
+			}
+		},	
+		{
+			"word":	"depravity",
+			"category": {
+				"color": ["B"]
+			}
+		},	
+		{
+			"word":	"genius",
+			"category": {
+				"effect": ["cardDraw"]
+			}
+		},	
+		{
+			"word":	"rancor",
+			"category": {
+				"effect": ["creatureBuff", "powerIncrease", "provoke"]
+			}
+		},
+		{
+			"word":	"peace",
+			"category": {
+				"effect": ["fog", "cantAttack"],
+				"usage": ["compound"]	
+			}
+		},
+		{
+			"word":	"divinity",
+			"category": {
+				"effect": ["fog", "protection", "damagePrevention"],
+				"flavor":  ["divinity"]
+			}
+		},
+		{
+			"word":	"cessation",
+			"category": {
+				"effect": ["fog", "cantAttack", "counterspell"]
+			}
+		},													
+	]
+}
+
+__verbsToCategorize = [
+	"galvanize",
+	"electrify",
+	"adulterate"
+];
+
+__abstractNouns = [
+	"indoctrination"
+];
+
+__cardNameTemplates = [
+	"Mark of {ABSTRACT_NOUN}",
+	"Veil of {ABSTRACT_NOUN}",
+	"{ENTITY_NOUN}form",
+	"Aspect of {ENTITY_NOUN}",
+	"Drown in {ABSTRACT_NOUN}",
+	"Essence of {ABSTRACT_NOUN}"
+];
+
+__possibleCardNames = [
+	"Head Trip"
+];
