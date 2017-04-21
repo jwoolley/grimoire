@@ -173,7 +173,7 @@ var SpellGenerator = function(creatureAbilities, GeneratorGlobals) {
 	function listEffectIds() {
 		Utilities.debug('Effect Ids:');
 		for (effect in programData.effectsMap) {
-			Utilies.debug(effect + ': ' + programData.effectsMap[effect].ability);
+			Utilities.debug(effect + ': ' + programData.effectsMap[effect].ability);
 		}
 	};
 
